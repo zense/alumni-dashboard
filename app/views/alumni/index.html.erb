@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Alumni</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @alumni.each do |alumnus| %>
+      <tr>
+        <td><%= link_to 'Show', alumnus %></td>
+        <td><%= link_to 'Edit', edit_alumnus_path(alumnus) %></td>
+        <td><%= link_to 'Destroy', alumnus, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Alumnus', new_alumnus_path %>

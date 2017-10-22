@@ -31,3 +31,10 @@
 
 en:
   hello: "Hello world"
+  admin:
+    actions:
+      bulk_mail:
+        title: 'Bulk Mail'
+        menu: 'Bulk Mail'
+        breadcrumb: 'Bulk Mail'
+        bulk_link: 'Mail'

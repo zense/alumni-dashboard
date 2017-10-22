@@ -34,7 +34,7 @@ en:
   admin:
     actions:
       bulk_mail:
-        title: 'Bulk Mail'
-        menu: 'Bulk Mail'
-        breadcrumb: 'Bulk Mail'
-        bulk_link: 'Mail'
+        title: 'Compose Mail'
+        menu: 'Mail everyone'
+        breadcrumb: 'Bulk mail'
+        bulk_link: 'Mail selected Alumni'

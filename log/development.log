@@ -34,3 +34,344 @@ Processing by RailsAdmin::MainController#index as HTML
 Completed 200 OK in 22321ms (Views: 21240.5ms | ActiveRecord: 3.9ms)
 
 
+Started GET "/admin" for 127.0.0.1 at 2017-10-22 18:29:08 +0530
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "alumni"[0m
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY "alumni"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (28.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (9.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (45.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (6.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (12.9ms)
+Completed 200 OK in 3812ms (Views: 2591.9ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/admin/alumnus?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-10-22 18:29:15 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"alumnus"}
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (48.3ms)
+Completed 200 OK in 131ms (Views: 79.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/alumnus/bulk_mail?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-10-22 18:31:12 +0530
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"alumnus"}
+Started GET "/admin/alumnus/bulk_mail" for 127.0.0.1 at 2017-10-22 18:31:13 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/pjax
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application (3.8ms)
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/pjax (4.6ms)
+Completed 200 OK in 1391ms (Views: 201.0ms | ActiveRecord: 0.6ms)
+
+
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (20.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (5.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (14.3ms)
+Completed 200 OK in 1904ms (Views: 1593.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/alumnus?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-10-22 18:31:20 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"alumnus"}
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (61.2ms)
+Completed 200 OK in 124ms (Views: 105.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/alumnus/bulk_mail?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-10-22 18:34:13 +0530
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"alumnus"}
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/pjax
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/pjax (5.8ms)
+Completed 200 OK in 1127ms (Views: 91.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/admin/alumnus/new?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-10-22 18:34:17 +0530
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"alumnus"}
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (10.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (8.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (114.7ms)
+Completed 200 OK in 159ms (Views: 140.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/alumnus/new" for 127.0.0.1 at 2017-10-22 18:34:55 +0530
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BoMp8voEfg+yt82NFWGiEjsnSizi2eVYNrFBEDynVlMMXSFPD5VxZHzV78J+wjxcjvJIbE5zE+tGVFaRL4GZ4w==", "alumnus"=>{"roll_no"=>"1", "name"=>"Vibhav Agarwal", "grad_year"=>"", "personal_mail"=>"vibhavagarwal5@gmail.com", "college_mail"=>"", "phone_no"=>"08861494421", "company_name"=>"", "designation"=>"", "location"=>"", "linkedIn"=>"", "facebook"=>""}, "return_to"=>"http://localhost:3000/admin/alumnus/bulk_mail", "_save"=>"", "model_name"=>"alumnus"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveModel::RangeError (8861494421 is out of range for ActiveModel::Type::Integer with limit 4 bytes):
+  
+activemodel (5.1.4) lib/active_model/type/integer.rb:51:in `ensure_in_range'
+activemodel (5.1.4) lib/active_model/type/integer.rb:27:in `serialize'
+activerecord (5.1.4) lib/active_record/attribute.rb:51:in `value_for_database'
+activerecord (5.1.4) lib/active_record/relation/query_attribute.rb:11:in `value_for_database'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/quoting.rb:166:in `block in type_casted_binds'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/quoting.rb:166:in `map'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/quoting.rb:166:in `type_casted_binds'
+activerecord (5.1.4) lib/active_record/connection_adapters/sqlite3_adapter.rb:206:in `exec_query'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/database_statements.rb:102:in `exec_insert'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/database_statements.rb:133:in `insert'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/query_cache.rb:17:in `insert'
+activerecord (5.1.4) lib/active_record/relation.rb:61:in `insert'
+activerecord (5.1.4) lib/active_record/persistence.rb:589:in `_create_record'
+activerecord (5.1.4) lib/active_record/counter_cache.rb:178:in `_create_record'
+activerecord (5.1.4) lib/active_record/locking/optimistic.rb:76:in `_create_record'
+activerecord (5.1.4) lib/active_record/attribute_methods/dirty.rb:296:in `_create_record'
+activerecord (5.1.4) lib/active_record/callbacks.rb:340:in `block in _create_record'
+activesupport (5.1.4) lib/active_support/callbacks.rb:131:in `run_callbacks'
+activesupport (5.1.4) lib/active_support/callbacks.rb:827:in `_run_create_callbacks'
+activerecord (5.1.4) lib/active_record/callbacks.rb:340:in `_create_record'
+activerecord (5.1.4) lib/active_record/timestamp.rb:95:in `_create_record'
+activerecord (5.1.4) lib/active_record/persistence.rb:563:in `create_or_update'
+activerecord (5.1.4) lib/active_record/callbacks.rb:336:in `block in create_or_update'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+activesupport (5.1.4) lib/active_support/callbacks.rb:827:in `_run_save_callbacks'
+activerecord (5.1.4) lib/active_record/callbacks.rb:336:in `create_or_update'
+activerecord (5.1.4) lib/active_record/persistence.rb:129:in `save'
+activerecord (5.1.4) lib/active_record/validations.rb:44:in `save'
+activerecord (5.1.4) lib/active_record/attribute_methods/dirty.rb:35:in `save'
+activerecord (5.1.4) lib/active_record/transactions.rb:308:in `block (2 levels) in save'
+activerecord (5.1.4) lib/active_record/transactions.rb:384:in `block in with_transaction_returning_status'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `block in transaction'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/transaction.rb:194:in `block in within_new_transaction'
+/usr/local/Cellar/ruby/2.4.1_2/lib/ruby/2.4.0/monitor.rb:214:in `mon_synchronize'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/transaction.rb:191:in `within_new_transaction'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `transaction'
+activerecord (5.1.4) lib/active_record/transactions.rb:210:in `transaction'
+activerecord (5.1.4) lib/active_record/transactions.rb:381:in `with_transaction_returning_status'
+activerecord (5.1.4) lib/active_record/transactions.rb:308:in `block in save'
+activerecord (5.1.4) lib/active_record/transactions.rb:323:in `rollback_active_record_state!'
+activerecord (5.1.4) lib/active_record/transactions.rb:307:in `save'
+activerecord (5.1.4) lib/active_record/suppressor.rb:42:in `save'
+rails_admin (1.2.0) lib/rails_admin/adapters/active_record/abstract_object.rb:23:in `save'
+rails_admin (1.2.0) lib/rails_admin/config/actions/new.rb:43:in `block (2 levels) in <class:New>'
+rails_admin (1.2.0) app/controllers/rails_admin/main_controller.rb:22:in `instance_eval'
+rails_admin (1.2.0) app/controllers/rails_admin/main_controller.rb:22:in `new'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.4) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+railties (5.1.4) lib/rails/railtie.rb:185:in `public_send'
+railties (5.1.4) lib/rails/railtie.rb:185:in `method_missing'
+actionpack (5.1.4) lib/action_dispatch/routing/mapper.rb:17:in `block in <class:Constraints>'
+actionpack (5.1.4) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack-pjax (1.0.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.3.1) lib/remotipart/middleware.rb:32:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/admin/alumnus/new" for 127.0.0.1 at 2017-10-22 18:35:05 +0530
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/application
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (2.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (8.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/application (99.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (18.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (3.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (14.2ms)
+Completed 200 OK in 1684ms (Views: 1674.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (5.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/admin/alumnus/new" for 127.0.0.1 at 2017-10-22 18:36:55 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NvqsKMDhV7xWByH3cXCfz/G6Qu9tPd5c2B95IRvo9hX3ShVFMEwJGR/WHRBiDBDCmp3PW5ocFXMiRyoEAP0WZA==", "alumnus"=>{"roll_no"=>"1", "name"=>"Vibhav Agarwal", "grad_year"=>"", "personal_mail"=>"vibhavagarwal5@gmail.com", "college_mail"=>"", "phone_no"=>"", "company_name"=>"", "designation"=>"", "location"=>"", "linkedIn"=>"", "facebook"=>""}, "return_to"=>"http://localhost:3000/admin/alumnus/new", "_save"=>"", "model_name"=>"alumnus"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "alumni" ("roll_no", "name", "personal_mail", "college_mail", "company_name", "designation", "location", "linkedIn", "facebook", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["roll_no", 1], ["name", "Vibhav Agarwal"], ["personal_mail", "vibhavagarwal5@gmail.com"], ["college_mail", ""], ["company_name", ""], ["designation", ""], ["location", ""], ["linkedIn", ""], ["facebook", ""], ["created_at", "2017-10-22 13:07:06.218581"], ["updated_at", "2017-10-22 13:07:06.218581"]]
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/alumnus/new
+Completed 302 Found in 141ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/admin/alumnus/new" for 127.0.0.1 at 2017-10-22 18:37:06 +0530
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/application
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (3.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (46.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/application (192.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (17.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (60.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (21.5ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (25.9ms)
+Completed 200 OK in 1024ms (Views: 995.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/alumnus?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-10-22 18:37:11 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"alumnus"}
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (65.6ms)
+Completed 200 OK in 128ms (Views: 100.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/alumnus/1?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-10-22 18:37:17 +0530
+Processing by RailsAdmin::MainController#show as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"alumnus", "id"=>"1"}
+  [1m[36mAlumnus Load (0.5ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/show.html.haml within layouts/rails_admin/pjax
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/show.html.haml within layouts/rails_admin/pjax (8.6ms)
+Completed 200 OK in 70ms (Views: 45.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/alumnus?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-10-22 18:37:20 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"alumnus"}
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (58.4ms)
+Completed 200 OK in 116ms (Views: 84.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/admin/alumnus/bulk_action" for 127.0.0.1 at 2017-10-22 18:39:21 +0530
+Processing by RailsAdmin::MainController#bulk_action as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hMGlIqDBcPRgc2xtcf/XFnNWQomiHAXgdKUYLK2RIUP3geAIC6RnaxzRNRNh9fr4xvWeWKkJguqlejRsopa+6Q==", "bulk_action"=>"bulk_mail", "bulk_ids"=>["1"], "model_name"=>"alumnus"}
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT "alumni".* FROM "alumni" WHERE "alumni"."id" = 1 ORDER BY alumni.id desc[0m
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application (2.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (8.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (30.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (5.6ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (18.0ms)
+Completed 200 OK in 376ms (Views: 365.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/admin/alumnus/bulk_action" for 127.0.0.1 at 2017-10-22 18:39:50 +0530
+Processing by RailsAdmin::MainController#bulk_action as HTML
+  Parameters: {"authenticity_token"=>"V4XIxxnEXpx9Rz8krFebWMi9rqd7gM1TQ/R1A3jisTOWNXGq6WkAOTSWA8O/KxRVo5ojE4yhBny5rCYmY/dRQg==", "subject"=>"asd", "body"=>"ad", "bulk_action"=>"bulk_mail", "bulk_ids"=>"[1]", "model_name"=>"alumnus"}
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant RailsAdmin::Config::Actions::BulkMail::Alumni):
+  
+config/initializers/rails_admin.rb:19:in `block (3 levels) in <class:BulkMail>'
+config/initializers/rails_admin.rb:19:in `map'
+config/initializers/rails_admin.rb:19:in `block (2 levels) in <class:BulkMail>'

@@ -737,3 +737,180 @@ Processing by RailsAdmin::MainController#index as HTML
 Completed 200 OK in 687ms (Views: 375.2ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/admin/alumnus/bulk_mail" for 127.0.0.1 at 2017-10-22 19:32:44 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application (5.1ms)
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.0ms)
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (10.1ms)
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.7ms)
+  Rendering /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (13.5ms)
+Completed 200 OK in 681ms (Views: 327.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/alumnus?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-10-22 19:32:47 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"alumnus"}
+  Rendering /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mAlumnus Load (0.1ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (63.7ms)
+Completed 200 OK in 94ms (Views: 80.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/alumnus" for 127.0.0.1 at 2017-10-22 19:34:32 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  Rendering /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (69.0ms)
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (3.3ms)
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (8.3ms)
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.5ms)
+  Rendering /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (10.4ms)
+Completed 200 OK in 687ms (Views: 348.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/alumnus/bulk_mail?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-10-22 19:34:37 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"alumnus"}
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/pjax
+  [1m[36mAlumnus Load (0.4ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/pjax (3.5ms)
+Completed 200 OK in 34ms (Views: 22.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/alumnus?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-10-22 19:34:40 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"alumnus"}
+  Rendering /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (66.1ms)
+Completed 200 OK in 103ms (Views: 81.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/alumnus/bulk_mail" for 127.0.0.1 at 2017-10-22 19:35:32 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application (9.7ms)
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.4ms)
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (8.8ms)
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.3ms)
+  Rendering /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (10.8ms)
+Completed 200 OK in 742ms (Views: 414.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/alumnus/bulk_mail" for 127.0.0.1 at 2017-10-22 19:35:54 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application (2.2ms)
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.1ms)
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (11.1ms)
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (4.0ms)
+  Rendering /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (12.6ms)
+Completed 200 OK in 706ms (Views: 370.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/alumnus/bulk_mail" for 127.0.0.1 at 2017-10-22 19:37:20 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application (11.8ms)
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (3.1ms)
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (9.5ms)
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.2ms)
+  Rendering /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (10.4ms)
+Completed 200 OK in 139ms (Views: 121.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/alumnus" for 127.0.0.1 at 2017-10-22 19:37:55 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  Rendering /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (47.1ms)
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (2.7ms)
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (7.7ms)
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.1ms)
+  Rendering /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (9.6ms)
+Completed 200 OK in 724ms (Views: 390.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/alumnus" for 127.0.0.1 at 2017-10-22 19:38:16 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  Rendering /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (48.5ms)
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (2.9ms)
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (7.2ms)
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.1ms)
+  Rendering /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (7.0ms)
+Completed 200 OK in 161ms (Views: 140.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/alumnus/export?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-10-22 19:38:32 +0530
+Processing by RailsAdmin::MainController#export as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"alumnus"}
+  Rendering /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/export.html.haml within layouts/rails_admin/pjax
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT '' AS str;[0m
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/export.html.haml within layouts/rails_admin/pjax (28.4ms)
+Completed 200 OK in 65ms (Views: 52.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admin/alumnus/bulk_mail?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-10-22 19:38:34 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"alumnus"}
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/pjax
+  [1m[36mAlumnus Load (0.6ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/pjax (3.1ms)
+Completed 200 OK in 36ms (Views: 22.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/alumnus/new?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-10-22 19:38:35 +0530
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"alumnus"}
+  Rendering /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (4.4ms)
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.9ms)
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (7.4ms)
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (43.2ms)
+Completed 200 OK in 70ms (Views: 56.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/alumnus?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-10-22 19:38:36 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"alumnus"}
+  Rendering /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /var/lib/gems/2.4.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (40.7ms)
+Completed 200 OK in 64ms (Views: 50.0ms | ActiveRecord: 0.2ms)
+
+

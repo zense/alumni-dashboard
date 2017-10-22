@@ -69,6 +69,6 @@ class AlumniController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def alumnus_params
-      params.fetch(:alumnus, {})
+      params.require(:alumnus).permit(:roll_no, :name, :grad_year, :personal_mail, :college_mail, :phone_no, :company_name, :designation, :location, :linkedIn, :facebook)
     end
 end

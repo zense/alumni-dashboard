@@ -11,6 +11,61 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= form.label :roll_no %>
+    <%= form.number_field :roll_no, id: :alumnus_roll_no %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :alumnus_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :grad_year %>
+    <%= form.number_field :grad_year, id: :alumnus_grad_year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :personal_mail %>
+    <%= form.text_field :personal_mail, id: :alumnus_personal_mail %>
+  </div>
+
+  <div class="field">
+    <%= form.label :college_mail %>
+    <%= form.text_field :college_mail, id: :alumnus_college_mail %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone_no %>
+    <%= form.number_field :phone_no, id: :alumnus_phone_no %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company_name %>
+    <%= form.text_field :company_name, id: :alumnus_company_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :designation %>
+    <%= form.text_field :designation, id: :alumnus_designation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location, id: :alumnus_location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :linkedIn %>
+    <%= form.text_field :linkedIn, id: :alumnus_linkedIn %>
+  </div>
+
+  <div class="field">
+    <%= form.label :facebook %>
+    <%= form.text_field :facebook, id: :alumnus_facebook %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

@@ -16,7 +16,7 @@ module RailsAdmin
                             @subject=params[:subject]
                             @body=params[:body]
                             @objects=JSON.parse(params[:bulk_ids])
-                            @objects=@objects.map { |e| Alumni.find(e) }
+                            @objects=@objects.map { |e| Alumnus.find(e) }
                             @objects.each do |object|
                                 AlumniMailer.test_mail(object,@subject,@body).deliver
                             end

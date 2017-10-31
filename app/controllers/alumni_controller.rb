@@ -72,4 +72,5 @@ class AlumniController < ApplicationController
     def alumnus_params
       params.require(:alumnus).permit(:roll_no, :name, :grad_year, :personal_mail, :college_mail, :phone_no, :company_name, :designation, :location, :linkedIn, :facebook)
     end
+
 end

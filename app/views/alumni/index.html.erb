@@ -1,7 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Alumni</h1>
-
+<ul class="hmenu">
+  <li>
+  <%= link_to('Logout', destroy_alumnus_session_path, method: :delete) %>
+  </li>
+</ul>
 <table>
   <thead>
     <tr>

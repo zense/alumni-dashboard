@@ -1,17 +1,18 @@
 class AlumniController < ApplicationController
+  before_action :authenticate_alumnus!
   before_action :set_alumnus, only: [:show, :edit, :update, :destroy]
 
   # GET /alumni
   # GET /alumni.json
+  # @alumnus=current_alumnus
   def index
-    @alumni = Alumnus.all
+    @alumni = current_alumnus
   end
 
   # GET /alumni/1
   # GET /alumni/1.json
   def show
   end
-
   # GET /alumni/new
   def new
     @alumnus = Alumnus.new

@@ -21,27 +21,24 @@
   </thead>
 
   <tbody>
-    <% @alumni.each do |alumnus| %>
+    <% #@alumni.each do |alumnus| %>
       <tr>
-        <td><%= alumnus.roll_no %></td>
-        <td><%= alumnus.name %></td>
-        <td><%= alumnus.grad_year %></td>
-        <td><%= alumnus.personal_mail %></td>
-        <td><%= alumnus.college_mail %></td>
-        <td><%= alumnus.phone_no %></td>
-        <td><%= alumnus.company_name %></td>
-        <td><%= alumnus.designation %></td>
-        <td><%= alumnus.location %></td>
-        <td><%= alumnus.linkedIn %></td>
-        <td><%= alumnus.facebook %></td>
-        <td><%= link_to 'Show', alumnus %></td>
-        <td><%= link_to 'Edit', edit_alumnus_path(alumnus) %></td>
-        <td><%= link_to 'Destroy', alumnus, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= @alumni.roll_no %></td>
+        <td><%= @alumni.name %></td>
+        <td><%= @alumni.grad_year %></td>
+        <td><%= @alumni.personal_mail %></td>
+        <td><%= @alumni.college_mail %></td>
+        <td><%= @alumni.phone_no %></td>
+        <td><%= @alumni.company_name %></td>
+        <td><%= @alumni.designation %></td>
+        <td><%= @alumni.location %></td>
+        <td><%= @alumni.linkedIn %></td>
+        <td><%= @alumni.facebook %></td>
+        <td><%= link_to 'Edit', edit_alumnus_path(@alumni) %></td>
+        <td><%= link_to 'Destroy', @alumni, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
+    <% #end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Alumnus', new_alumnus_path %>

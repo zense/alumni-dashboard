@@ -6,7 +6,7 @@ class AlumniController < ApplicationController
   # GET /alumni.json
   # @alumnus=current_alumnus
   def index
-    @alumni = current_alumnus
+    @alumnus = current_alumnus
   end
 
   # GET /alumni/1

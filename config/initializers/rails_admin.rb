@@ -11,16 +11,43 @@ module RailsAdmin
                 end
                 register_instance_option :controller do
                     proc do
-                        puts(params.to_json)
                         if (params[:subject].blank?)
                             @objects=list_entries(@model_config, :post)
                             render @action.template_name
                         else
                             @subject=params[:subject]
                             @body=params[:body]
+                            @body_temp = Liquid::Template.parse (@body)
+                            @subject_temp = Liquid::Template.parse (@subject)
                             @objects=JSON.parse(params[:bulk_ids])
                             @objects=@objects.map { |e| Alumnus.find(e) }
                             @objects.each do |object|
+                                @body=@body_temp.render(
+                                'roll_no'=>object.roll_no ,
+                                'name'=>object.name ,
+                                'grad_year'=>object.grad_year ,
+                                'personal_mail'=>object.personal_mail ,
+                                'college_mail'=>object.college_mail ,
+                                'phone_no'=>object.phone_no ,
+                                'company_name'=>object.company_name ,
+                                'designation'=>object.designation ,
+                                'location'=>object.location ,
+                                'linkedIn'=>object.linkedIn ,
+                                'facebook'=>object.facebook
+                                )
+                                @subject=@subject_temp.render(
+                                'roll_no'=>object.roll_no ,
+                                'name'=>object.name ,
+                                'grad_year'=>object.grad_year ,
+                                'personal_mail'=>object.personal_mail ,
+                                'college_mail'=>object.college_mail ,
+                                'phone_no'=>object.phone_no ,
+                                'company_name'=>object.company_name ,
+                                'designation'=>object.designation ,
+                                'location'=>object.location ,
+                                'linkedIn'=>object.linkedIn ,
+                                'facebook'=>object.facebook
+                                )
                                 AlumniMailer.test_mail(object,@subject,@body).deliver
                             end
                             redirect_to back_or_index

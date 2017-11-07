@@ -6357,3 +6357,199 @@ Processing by AlumniController#show as HTML
 Completed 200 OK in 35ms (Views: 29.8ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-11-07 16:03:47 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlumniController#index as HTML
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering alumni/index.html.erb within layouts/application
+  Rendered alumni/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 307ms (Views: 265.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/alumni/1" for 127.0.0.1 at 2017-11-07 16:03:53 +0530
+Processing by AlumniController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAlumnus Load (0.9ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.6ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Alumnus Load (0.0ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-07 16:03:53 +0530
+Processing by AlumniController#index as HTML
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering alumni/index.html.erb within layouts/application
+  Rendered alumni/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 24ms (Views: 21.3ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/alumni/sign_out" for 127.0.0.1 at 2017-11-07 16:03:58 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"quffkRjQG9OWSiTtPap2lVWuRYljde2fSv7SUCOFyzrIVXuq8lEMu7dd41l9yKSJzwA6K4rdxLg67BEAzyZDJQ=="}
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 26ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-07 16:03:58 +0530
+Processing by AlumniController#index as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/alumni/sign_in" for 127.0.0.1 at 2017-11-07 16:03:58 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/alumni/sign_in" for 127.0.0.1 at 2017-11-07 16:04:01 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N7MSGAc5UeKRohuAx6vk1H1PNdkCqWEjNQKibRdQ5la3R60Ss5NL0F28wqYoRWD0/lQp01J8lC6scDx7BC8vCA==", "alumnus"=>{"email"=>"visheshruparelia18@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAlumnus Load (0.4ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."email" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["email", "visheshruparelia18@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "alumni" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "alumni"."id" = ?[0m  [["current_sign_in_at", "2017-11-07 10:34:01.663827"], ["last_sign_in_at", "2017-11-06 19:54:18.565143"], ["sign_in_count", 24], ["updated_at", "2017-11-07 10:34:01.664589"], ["id", 1]]
+  [1m[35m (113.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/
+Completed 302 Found in 299ms (ActiveRecord: 114.9ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2017-11-07 16:04:01 +0530
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "alumni" WHERE ('t'='t')[0m
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY "alumni"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (18.1ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.4ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (9.3ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.5ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (4.2ms)
+Completed 200 OK in 581ms (Views: 136.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/alumnus?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-11-07 16:04:03 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.4ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE ('t'='t') ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (71.5ms)
+Completed 200 OK in 108ms (Views: 87.2ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/alumni/sign_out" for 127.0.0.1 at 2017-11-07 16:04:11 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JWDKx5EFUiPrDg3PqjAgCRetRrW56pcLu3DR9C4SmqZfl0z0S9Yx9bt5anOf3ajkKjLJBt6DE2P1pSwC2WpnbA=="}
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-07 16:04:11 +0530
+Processing by AlumniController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/alumni/sign_in" for 127.0.0.1 at 2017-11-07 16:04:11 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/alumni/sign_in" for 127.0.0.1 at 2017-11-07 16:04:17 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oFkAsHpOxiCSNBs7rhLlMVzgJuYA/UyvEe7Kd02rQSPGSe8TEMDtfoqTFTdw0qGzG480djaAxwa6fQu74b1G/w==", "alumnus"=>{"email"=>"adsf@waefsgf.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAlumnus Load (1.1ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."email" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["email", "adsf@waefsgf.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "alumni" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "alumni"."id" = ?[0m  [["current_sign_in_at", "2017-11-07 10:34:17.352979"], ["last_sign_in_at", "2017-11-02 10:16:00"], ["sign_in_count", 9], ["updated_at", "2017-11-07 10:34:17.353685"], ["id", 2]]
+  [1m[35m (65.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 254ms (ActiveRecord: 67.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-07 16:04:17 +0530
+Processing by AlumniController#index as HTML
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering alumni/index.html.erb within layouts/application
+  Rendered alumni/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-07 16:04:20 +0530
+Processing by AlumniController#index as HTML
+  [1m[36mAlumnus Load (0.6ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering alumni/index.html.erb within layouts/application
+  Rendered alumni/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 26ms (Views: 22.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/2" for 127.0.0.1 at 2017-11-07 16:04:24 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/2"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/alumni/2" for 127.0.0.1 at 2017-11-07 16:04:33 +0530
+Processing by AlumniController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlumnus Load (1.0ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.5ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Alumnus Load (0.1ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering alumni/show.html.erb within layouts/application
+  Rendered alumni/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 47ms (Views: 34.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/alumni/1" for 127.0.0.1 at 2017-11-07 16:04:38 +0530
+Processing by AlumniController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAlumnus Load (0.7ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.6ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Alumnus Load (0.0ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-07 16:04:38 +0530
+Processing by AlumniController#index as HTML
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering alumni/index.html.erb within layouts/application
+  Rendered alumni/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 22ms (Views: 19.3ms | ActiveRecord: 0.3ms)
+
+

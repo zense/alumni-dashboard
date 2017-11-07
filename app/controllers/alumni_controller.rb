@@ -12,6 +12,12 @@ class AlumniController < ApplicationController
   # GET /alumni/1
   # GET /alumni/1.json
   def show
+    @alumnus = Alumnus.find params[:id]
+    unless current_alumnus == @alumnus
+      flash[:notice] = "You don't have access!"
+      redirect_to root_path
+      return
+    end
   end
   # GET /alumni/new
   def new
@@ -20,6 +26,12 @@ class AlumniController < ApplicationController
 
   # GET /alumni/1/edit
   def edit
+    @alumnus = Alumnus.find params[:id]
+    unless current_alumnus == @alumnus
+      flash[:notice] = "You don't have access!"
+      redirect_to root_path
+      return
+    end
   end
 
   # POST /alumni

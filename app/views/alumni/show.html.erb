@@ -54,6 +54,7 @@
   <strong>Facebook:</strong>
   <%= @alumnus.facebook %>
 </p>
-
-<%= link_to 'Edit', edit_alumnus_path(@alumnus) %> |
+<%if current_alumnus==@alumnus%>
+    <%= link_to 'Edit', edit_alumnus_path(@alumnus) %> |
+<%end%>
 <%= link_to 'Back', alumni_path %>

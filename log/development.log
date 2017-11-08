@@ -6553,3 +6553,2239 @@ Processing by AlumniController#index as HTML
 Completed 200 OK in 22ms (Views: 19.3ms | ActiveRecord: 0.3ms)
 
 
+Started POST "/alumni/sign_in" for 127.0.0.1 at 2017-11-08 15:44:01 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hAPiwu+N6+c1b+YGKoUOlixQJUGpheaBd0Wniayc+158xW1ysQq1uN0yM118x9Zir/sH2tKO2tOGomRgdIR/4A==", "alumnus"=>{"email"=>"visheshruparelia18@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.1.4) lib/action_controller/metal/request_forgery_protection.rb:195:in `handle_unverified_request'
+actionpack (5.1.4) lib/action_controller/metal/request_forgery_protection.rb:227:in `handle_unverified_request'
+devise (4.3.0) lib/devise/controllers/helpers.rb:253:in `handle_unverified_request'
+actionpack (5.1.4) lib/action_controller/metal/request_forgery_protection.rb:222:in `verify_authenticity_token'
+activesupport (5.1.4) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.4) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.4) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:130:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/mapper.rb:16:in `block in <class:Constraints>'
+actionpack (5.1.4) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack-pjax (1.0.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.3.1) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/alumni/sign_in" for 127.0.0.1 at 2017-11-08 15:44:15 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hAPiwu+N6+c1b+YGKoUOlixQJUGpheaBd0Wniayc+158xW1ysQq1uN0yM118x9Zir/sH2tKO2tOGomRgdIR/4A==", "alumnus"=>{"email"=>"visheshruparelia18@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.1.4) lib/action_controller/metal/request_forgery_protection.rb:195:in `handle_unverified_request'
+actionpack (5.1.4) lib/action_controller/metal/request_forgery_protection.rb:227:in `handle_unverified_request'
+devise (4.3.0) lib/devise/controllers/helpers.rb:253:in `handle_unverified_request'
+actionpack (5.1.4) lib/action_controller/metal/request_forgery_protection.rb:222:in `verify_authenticity_token'
+activesupport (5.1.4) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.4) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.4) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:130:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/mapper.rb:16:in `block in <class:Constraints>'
+actionpack (5.1.4) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack-pjax (1.0.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.3.1) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/alumni/sign_in" for 127.0.0.1 at 2017-11-08 15:44:29 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.2ms)
+Started POST "/alumni/sign_in" for 127.0.0.1 at 2017-11-08 15:44:31 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0OfoIk/JsU3R9NHycmmMPuIGWHQnxXotOVqGKqaUF3amcbNKlFpJ0tq7/NwYfcb1s2n7KY5bDC/XpUQGkOQPtQ==", "alumnus"=>{"email"=>"visheshruparelia18@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."email" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["email", "visheshruparelia18@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "alumni" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "alumni"."id" = ?[0m  [["current_sign_in_at", "2017-11-08 10:14:31.802776"], ["last_sign_in_at", "2017-11-07 10:34:01.663827"], ["sign_in_count", 25], ["updated_at", "2017-11-08 10:14:31.804395"], ["id", 1]]
+  [1m[35m (80.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/
+Completed 302 Found in 261ms (ActiveRecord: 81.8ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2017-11-08 15:44:31 +0530
+Completed 200 OK in 3394ms (Views: 3356.3ms | ActiveRecord: 1.8ms)
+
+
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "alumni" WHERE ('t'='t')[0m
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY "alumni"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (18.5ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (6.4ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (12.2ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.5ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (4.4ms)
+Completed 200 OK in 709ms (Views: 317.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/alumni/sign_in" for 127.0.0.1 at 2017-11-08 15:44:33 +0530
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mAlumnus Load (0.8ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 7ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2017-11-08 15:44:33 +0530
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "alumni" WHERE ('t'='t')[0m
+  [1m[36mAlumnus Load (0.4ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY "alumni"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (13.5ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.3ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (11.1ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.6ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (5.1ms)
+Completed 200 OK in 138ms (Views: 115.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/alumnus?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-11-08 15:44:37 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (1.9ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE ('t'='t') ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (68.5ms)
+Completed 200 OK in 107ms (Views: 85.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/admin/alumnus/bulk_mail?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-11-08 15:44:44 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.4ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/pjax
+  [1m[36mAlumnus Load (0.4ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/pjax (2.1ms)
+Completed 200 OK in 40ms (Views: 23.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/alumnus?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-11-08 15:44:47 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.7ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE ('t'='t') ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (56.4ms)
+Completed 200 OK in 92ms (Views: 68.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/alumnus" for 127.0.0.1 at 2017-11-08 15:45:07 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.4ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE ('t'='t') ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (70.9ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.2ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (9.5ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.7ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (9.4ms)
+Completed 200 OK in 190ms (Views: 175.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/alumnus/bulk_mail?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-11-08 15:45:09 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.4ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/pjax
+  [1m[36mAlumnus Load (0.6ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/pjax (3.7ms)
+Completed 200 OK in 43ms (Views: 27.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/alumnus/bulk_mail" for 127.0.0.1 at 2017-11-08 15:45:22 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application (1.8ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.6ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (10.3ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (3.4ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (13.1ms)
+Completed 200 OK in 916ms (Views: 363.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/alumnus/bulk_mail" for 127.0.0.1 at 2017-11-08 15:45:51 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (1.4ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application (2.0ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (3.9ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (9.5ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.5ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (12.5ms)
+Completed 200 OK in 138ms (Views: 116.0ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/admin/alumnus/bulk_mail" for 127.0.0.1 at 2017-11-08 15:46:14 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"authenticity_token"=>"UnpFgpjZUGUoMR5vzFMR6KmolCFPsSGTLZnS8nKHZLDfqLfmlz0bICGZOjpPQ4daOuGpv0tX9Gw1RrNv6Kwu1w==", "subject"=>"asdas", "body"=>"<strong>asd<br /><br /></strong>{{name}}", "bulk_action"=>"bulk_mail", "bulk_ids"=>"[5,3,2,1]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.1ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.1ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.1ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+AlumniMailer#test_mail: processed outbound mail in 249.7ms
+Sent mail to  (5.9ms)
+Date: Wed, 08 Nov 2017 15:46:15 +0530
+From: from@example.com
+Message-ID: <5a02d96f2fae2_3d70153994496f7@vishesh-Inspiron-5559.mail>
+Subject: asdas
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<strong>asd<br /><br /></strong>
+AlumniMailer#test_mail: processed outbound mail in 0.9ms
+Sent mail to vibhavagarwal5@gmail.com (2409.8ms)
+Date: Wed, 08 Nov 2017 15:46:15 +0530
+From: from@example.com
+To: vibhavagarwal5@gmail.com
+Message-ID: <5a02d96f30f2b_3d7015399449748@vishesh-Inspiron-5559.mail>
+Subject: asdas
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<strong>asd<br /><br /></strong>Vibhav
+AlumniMailer#test_mail: processed outbound mail in 3.1ms
+Sent mail to vishesh.ruparelia@iiitb.org (3380.4ms)
+Date: Wed, 08 Nov 2017 15:46:17 +0530
+From: from@example.com
+To: vishesh.ruparelia@iiitb.org
+Message-ID: <5a02d97197244_3d701539944987d@vishesh-Inspiron-5559.mail>
+Subject: asdas
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<strong>asd<br /><br /></strong>Vishesh
+AlumniMailer#test_mail: processed outbound mail in 4.4ms
+Sent mail to  (3.8ms)
+Date: Wed, 08 Nov 2017 15:46:21 +0530
+From: from@example.com
+Message-ID: <5a02d975186d_3d70153994499af@vishesh-Inspiron-5559.mail>
+Subject: asdas
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<strong>asd<br /><br /></strong>sadfdg
+Redirected to http://localhost:3000/admin/alumnus
+Completed 302 Found in 6081ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/alumnus" for 127.0.0.1 at 2017-11-08 15:46:21 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.5ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE ('t'='t') ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (58.9ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.0ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (9.6ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.5ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (6.4ms)
+Completed 200 OK in 173ms (Views: 160.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/alumnus/bulk_mail?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-11-08 15:49:09 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/pjax
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/pjax (1.9ms)
+Completed 200 OK in 512ms (Views: 22.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/alumnus/bulk_mail" for 127.0.0.1 at 2017-11-08 15:49:12 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.5ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application (2.0ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.4ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (10.3ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.5ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (10.4ms)
+Completed 200 OK in 398ms (Views: 382.8ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/admin/alumnus/bulk_mail" for 127.0.0.1 at 2017-11-08 15:49:21 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"authenticity_token"=>"W/ayqr62vTbKoLAb1HkC0710QjlaSM0ID/lEdl7Eq1HWJEDOsVL2c8MIlE5XaZRhLj1/p16uGPcXJiXrxO/hNg==", "subject"=>"", "body"=>"scsdsvfd<strong>dcvsfdbg</strong>", "bulk_action"=>"bulk_mail", "bulk_ids"=>"[5,3,2,1]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY alumni.id desc[0m  [["id", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application (1.3ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (6.1ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (10.8ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.4ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (7.3ms)
+Completed 200 OK in 111ms (Views: 99.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/admin/alumnus/bulk_mail" for 127.0.0.1 at 2017-11-08 15:49:30 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"authenticity_token"=>"cyVxPCqeMo54r4X1ffbPG0IsS9T3M0ndbzcNzXqiy0z+94NYJXp5y3EHoaD+5lmp0WV2SvPVnCJ36GxQ4ImBKw==", "subject"=>"addfsdgb", "body"=>"czv<strong>sadsffvd</strong>", "bulk_action"=>"bulk_mail", "bulk_ids"=>"[]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin/alumnus
+Completed 302 Found in 10ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/alumnus" for 127.0.0.1 at 2017-11-08 15:49:30 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE ('t'='t') ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (58.3ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.1ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (8.9ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.6ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (9.4ms)
+Completed 200 OK in 179ms (Views: 162.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/alumnus/bulk_mail?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-11-08 15:49:37 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.4ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/pjax
+  [1m[36mAlumnus Load (0.5ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/pjax (2.4ms)
+Completed 200 OK in 40ms (Views: 21.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/alumnus/bulk_mail" for 127.0.0.1 at 2017-11-08 15:49:39 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.5ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.6ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application (3.3ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.1ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (8.8ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.6ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (9.2ms)
+Completed 200 OK in 134ms (Views: 118.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/alumnus/bulk_mail" for 127.0.0.1 at 2017-11-08 15:49:40 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (1.4ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.8ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application (3.5ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.1ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (11.3ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (4.0ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (9.2ms)
+Completed 200 OK in 168ms (Views: 132.9ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/admin/alumnus/bulk_mail" for 127.0.0.1 at 2017-11-08 15:49:48 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"authenticity_token"=>"J9NF5RcrSUqpco0gFeS+609a5jDCgV6b0qHsMwNmB5qqAbeBGM8CD6DaqXWW9ChZ3BPbrsZni2TKfo2umU1N/Q==", "subject"=>"dfsfd", "body"=>"asccdsvf<strong>sadsvf</strong>", "bulk_action"=>"bulk_mail", "bulk_ids"=>"[5,3,2,1]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.6ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.1ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.1ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.1ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+AlumniMailer#test_mail: processed outbound mail in 211.7ms
+Sent mail to  (4.4ms)
+Date: Wed, 08 Nov 2017 15:49:49 +0530
+From: from@example.com
+Message-ID: <5a02da452cbdb_3e2a20aea1897343@vishesh-Inspiron-5559.mail>
+Subject: dfsfd
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+asccdsvf<strong>sadsvf</strong>
+AlumniMailer#test_mail: processed outbound mail in 0.7ms
+Sent mail to vibhavagarwal5@gmail.com (6353.5ms)
+Date: Wed, 08 Nov 2017 15:49:49 +0530
+From: from@example.com
+To: vibhavagarwal5@gmail.com
+Message-ID: <5a02da452da33_3e2a20aea1897465@vishesh-Inspiron-5559.mail>
+Subject: dfsfd
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+asccdsvf<strong>sadsvf</strong>
+AlumniMailer#test_mail: processed outbound mail in 3.1ms
+Sent mail to vishesh.ruparelia@iiitb.org (6218.9ms)
+Date: Wed, 08 Nov 2017 15:49:55 +0530
+From: from@example.com
+To: vishesh.ruparelia@iiitb.org
+Message-ID: <5a02da4b8657e_3e2a20aea18975b5@vishesh-Inspiron-5559.mail>
+Subject: dfsfd
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+asccdsvf<strong>sadsvf</strong>
+AlumniMailer#test_mail: processed outbound mail in 3.2ms
+Sent mail to  (4.8ms)
+Date: Wed, 08 Nov 2017 15:50:01 +0530
+From: from@example.com
+Message-ID: <5a02da51bd18a_3e2a20aea18976d4@vishesh-Inspiron-5559.mail>
+Subject: dfsfd
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+asccdsvf<strong>sadsvf</strong>
+Redirected to http://localhost:3000/admin/alumnus
+Completed 302 Found in 12827ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/alumnus" for 127.0.0.1 at 2017-11-08 15:50:01 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE ('t'='t') ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (53.5ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.6ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (10.3ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.4ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (7.8ms)
+Completed 200 OK in 172ms (Views: 159.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/alumnus" for 127.0.0.1 at 2017-11-08 18:26:31 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE ('t'='t') ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (57.4ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.2ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (9.9ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.5ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (12.4ms)
+Completed 200 OK in 972ms (Views: 422.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/alumnus/bulk_mail?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-11-08 18:26:34 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/pjax
+  [1m[36mAlumnus Load (0.5ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/pjax (2.6ms)
+Completed 200 OK in 48ms (Views: 25.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/alumnus/bulk_mail" for 127.0.0.1 at 2017-11-08 18:26:39 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.5ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.6ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application (2.4ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (6.3ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (11.2ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.7ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (11.5ms)
+Completed 200 OK in 133ms (Views: 114.6ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/admin/alumnus/bulk_mail" for 127.0.0.1 at 2017-11-08 18:26:45 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"authenticity_token"=>"ylljA4pzfSBw8eC5ofY3+4oTUbDGFr3Bshf/E9Qd5J9Hi5FnhZc2ZXlZxOwi5qFJGVpsLsLwaD6qyJ6OTjau+A==", "subject"=>"", "body"=>"<strong>cdsvfdbvg</strong>", "bulk_action"=>"bulk_mail", "bulk_ids"=>"[5,3,2,1]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY alumni.id desc[0m  [["id", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application (2.3ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.2ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (11.1ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (3.1ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (10.4ms)
+Completed 200 OK in 133ms (Views: 121.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/admin/alumnus/bulk_mail" for 127.0.0.1 at 2017-11-08 18:26:52 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"authenticity_token"=>"nntp+KocooqasHna+YPGA7mTGOAIiO5a3Esl1vZeqSETqZucpfjpz5MYXY96k1CxKtolfgxuO6XElERLbHXjRg==", "subject"=>"ascdsvfd", "body"=>"<strong>dsvfd</strong>", "bulk_action"=>"bulk_mail", "bulk_ids"=>"[]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin/alumnus
+Completed 302 Found in 13ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/alumnus" for 127.0.0.1 at 2017-11-08 18:26:52 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.5ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE ('t'='t') ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (70.7ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (7.1ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (13.4ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (3.0ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (11.7ms)
+Completed 200 OK in 206ms (Views: 191.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/alumnus/bulk_mail?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-11-08 18:27:23 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.4ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/pjax
+  [1m[36mAlumnus Load (0.8ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/pjax (4.2ms)
+Completed 200 OK in 54ms (Views: 34.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/alumnus/bulk_mail" for 127.0.0.1 at 2017-11-08 18:27:25 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.4ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application (1.9ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.0ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (8.6ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.7ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (10.9ms)
+Completed 200 OK in 133ms (Views: 119.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/admin/alumnus/bulk_mail" for 127.0.0.1 at 2017-11-08 18:27:33 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"authenticity_token"=>"a1iaS9q+EtRWwzMrK2pTPP9kGuc2GAEF5LRiHrihBVbmimgv1VpZkV9rF36oesWObC0neTL+1Pr8awODIopPMQ==", "subject"=>"dfsf", "body"=>"cvdb<strong>dsvfd</strong>", "bulk_action"=>"bulk_mail", "bulk_ids"=>"[5,3,2,1]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.4ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering alumni_mailer/test_mail.html.erb within layouts/mailer
+  Rendered alumni_mailer/test_mail.html.erb within layouts/mailer (0.3ms)
+AlumniMailer#test_mail: processed outbound mail in 125.7ms
+Sent mail to  (4.0ms)
+Date: Wed, 08 Nov 2017 18:27:34 +0530
+From: from@example.com
+Message-ID: <5a02ff3e1eeed_43f1233dd249859a@vishesh-Inspiron-5559.mail>
+Subject: dfsf
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    %html
+    %head
+        %meta{:content => "text/html", :charset => "UTF-8", 'http-equiv' => "Content-Type"}
+    %body= @body.html_safe
+
+  </body>
+</html>
+
+  Rendering alumni_mailer/test_mail.html.erb within layouts/mailer
+  Rendered alumni_mailer/test_mail.html.erb within layouts/mailer (0.0ms)
+AlumniMailer#test_mail: processed outbound mail in 5.0ms
+Sent mail to vibhavagarwal5@gmail.com (5696.1ms)
+Date: Wed, 08 Nov 2017 18:27:34 +0530
+From: from@example.com
+To: vibhavagarwal5@gmail.com
+Message-ID: <5a02ff3e20cb1_43f1233dd2498666@vishesh-Inspiron-5559.mail>
+Subject: dfsf
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    %html
+    %head
+        %meta{:content => "text/html", :charset => "UTF-8", 'http-equiv' => "Content-Type"}
+    %body= @body.html_safe
+
+  </body>
+</html>
+
+  Rendering alumni_mailer/test_mail.html.erb within layouts/mailer
+  Rendered alumni_mailer/test_mail.html.erb within layouts/mailer (0.2ms)
+AlumniMailer#test_mail: processed outbound mail in 22.9ms
+Sent mail to vishesh.ruparelia@iiitb.org (4177.4ms)
+Date: Wed, 08 Nov 2017 18:27:39 +0530
+From: from@example.com
+To: vishesh.ruparelia@iiitb.org
+Message-ID: <5a02ff43d119b_43f1233dd249871b@vishesh-Inspiron-5559.mail>
+Subject: dfsf
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    %html
+    %head
+        %meta{:content => "text/html", :charset => "UTF-8", 'http-equiv' => "Content-Type"}
+    %body= @body.html_safe
+
+  </body>
+</html>
+
+  Rendering alumni_mailer/test_mail.html.erb within layouts/mailer
+  Rendered alumni_mailer/test_mail.html.erb within layouts/mailer (0.1ms)
+AlumniMailer#test_mail: processed outbound mail in 25.3ms
+Sent mail to  (4.4ms)
+Date: Wed, 08 Nov 2017 18:27:44 +0530
+From: from@example.com
+Message-ID: <5a02ff48f420_43f1233dd24988fd@vishesh-Inspiron-5559.mail>
+Subject: dfsf
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    %html
+    %head
+        %meta{:content => "text/html", :charset => "UTF-8", 'http-equiv' => "Content-Type"}
+    %body= @body.html_safe
+
+  </body>
+</html>
+
+Redirected to http://localhost:3000/admin/alumnus
+Completed 302 Found in 10083ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/alumnus" for 127.0.0.1 at 2017-11-08 18:27:44 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE ('t'='t') ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (51.8ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.8ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (9.5ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.5ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (6.2ms)
+Completed 200 OK in 165ms (Views: 153.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/alumnus/bulk_mail?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-11-08 18:29:05 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.4ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/pjax
+  [1m[36mAlumnus Load (0.6ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/pjax (3.3ms)
+Completed 200 OK in 51ms (Views: 27.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/alumnus/bulk_mail" for 127.0.0.1 at 2017-11-08 18:29:06 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (1.0ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application (1.9ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.3ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (10.2ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.4ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (8.1ms)
+Completed 200 OK in 126ms (Views: 106.8ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/admin/alumnus/bulk_mail" for 127.0.0.1 at 2017-11-08 18:29:12 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"authenticity_token"=>"jxNiSFp6lgvF8KSQGWWPhOBArtF1ueQZ2BrzAmv+0P8CwZAsVZ7dTsxYgMWadRk2cwmTT3FfMebAxZKf8dWamA==", "subject"=>"sadvsfd", "body"=>"<strong>dfs</strong>", "bulk_action"=>"bulk_mail", "bulk_ids"=>"[5,3,2,1]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering alumni_mailer/test_mail.html.erb within layouts/mailer
+  Rendered alumni_mailer/test_mail.html.erb within layouts/mailer (0.4ms)
+AlumniMailer#test_mail: processed outbound mail in 6.7ms
+Sent mail to  (1.8ms)
+Date: Wed, 08 Nov 2017 18:29:12 +0530
+From: from@example.com
+Message-ID: <5a02ffa0ca51c_43f1233dc7098917@vishesh-Inspiron-5559.mail>
+Subject: sadvsfd
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    &lt;strong&gt;dfs&lt;/strong&gt;
+
+  </body>
+</html>
+
+  Rendering alumni_mailer/test_mail.html.erb within layouts/mailer
+  Rendered alumni_mailer/test_mail.html.erb within layouts/mailer (0.1ms)
+AlumniMailer#test_mail: processed outbound mail in 6.6ms
+Sent mail to vibhavagarwal5@gmail.com (4589.7ms)
+Date: Wed, 08 Nov 2017 18:29:12 +0530
+From: from@example.com
+To: vibhavagarwal5@gmail.com
+Message-ID: <5a02ffa0cc6d1_43f1233dc7099036@vishesh-Inspiron-5559.mail>
+Subject: sadvsfd
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    &lt;strong&gt;dfs&lt;/strong&gt;
+
+  </body>
+</html>
+
+  Rendering alumni_mailer/test_mail.html.erb within layouts/mailer
+  Rendered alumni_mailer/test_mail.html.erb within layouts/mailer (0.2ms)
+AlumniMailer#test_mail: processed outbound mail in 24.9ms
+Sent mail to vishesh.ruparelia@iiitb.org (3450.4ms)
+Date: Wed, 08 Nov 2017 18:29:17 +0530
+From: from@example.com
+To: vishesh.ruparelia@iiitb.org
+Message-ID: <5a02ffa56f319_43f1233dc709919d@vishesh-Inspiron-5559.mail>
+Subject: sadvsfd
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    &lt;strong&gt;dfs&lt;/strong&gt;
+
+  </body>
+</html>
+
+  Rendering alumni_mailer/test_mail.html.erb within layouts/mailer
+  Rendered alumni_mailer/test_mail.html.erb within layouts/mailer (0.1ms)
+AlumniMailer#test_mail: processed outbound mail in 19.7ms
+Sent mail to  (1.7ms)
+Date: Wed, 08 Nov 2017 18:29:20 +0530
+From: from@example.com
+Message-ID: <5a02ffa8e29d7_43f1233dc7099229@vishesh-Inspiron-5559.mail>
+Subject: sadvsfd
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    &lt;strong&gt;dfs&lt;/strong&gt;
+
+  </body>
+</html>
+
+Redirected to http://localhost:3000/admin/alumnus
+Completed 302 Found in 8125ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/alumnus" for 127.0.0.1 at 2017-11-08 18:29:20 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE ('t'='t') ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (62.2ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.4ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (9.1ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (3.1ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (7.3ms)
+Completed 200 OK in 173ms (Views: 162.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/alumnus/bulk_mail?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-11-08 18:30:24 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (1.0ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/pjax
+  [1m[36mAlumnus Load (0.7ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/pjax (3.7ms)
+Completed 200 OK in 45ms (Views: 27.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin/alumnus/bulk_mail" for 127.0.0.1 at 2017-11-08 18:30:31 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.8ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application
+  [1m[36mAlumnus Load (1.0ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application (3.8ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.1ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (8.8ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.5ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (10.5ms)
+Completed 200 OK in 135ms (Views: 117.3ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/admin/alumnus/bulk_mail" for 127.0.0.1 at 2017-11-08 18:30:49 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"authenticity_token"=>"4eV+txYEFk4rvkvzQGpiv9pbHIGAgPaPmXSJ9jjPhRlsN4zTGeBdCyIWb6bDevQNSRIhH4RmI3CBq+hrouTPfg==", "subject"=>"vfb", "body"=>"cdsvfdb<br /><br />dsvfd", "bulk_action"=>"bulk_mail", "bulk_ids"=>"[5,3,2,1]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.4ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.1ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.1ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering alumni_mailer/test_mail.html.erb within layouts/mailer
+  Rendered alumni_mailer/test_mail.html.erb within layouts/mailer (0.4ms)
+AlumniMailer#test_mail: processed outbound mail in 6.7ms
+Sent mail to  (1.7ms)
+Date: Wed, 08 Nov 2017 18:30:49 +0530
+From: from@example.com
+Message-ID: <5a03000167703_43f1233de8c9939e@vishesh-Inspiron-5559.mail>
+Subject: vfb
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    cdsvfdb&lt;br /&gt;&lt;br /&gt;dsvfd
+
+  </body>
+</html>
+
+  Rendering alumni_mailer/test_mail.html.erb within layouts/mailer
+  Rendered alumni_mailer/test_mail.html.erb within layouts/mailer (0.1ms)
+AlumniMailer#test_mail: processed outbound mail in 6.7ms
+Sent mail to vibhavagarwal5@gmail.com (4142.2ms)
+Date: Wed, 08 Nov 2017 18:30:49 +0530
+From: from@example.com
+To: vibhavagarwal5@gmail.com
+Message-ID: <5a03000169ae0_43f1233de8c994eb@vishesh-Inspiron-5559.mail>
+Subject: vfb
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    cdsvfdb&lt;br /&gt;&lt;br /&gt;dsvfd
+
+  </body>
+</html>
+
+  Rendering alumni_mailer/test_mail.html.erb within layouts/mailer
+  Rendered alumni_mailer/test_mail.html.erb within layouts/mailer (0.1ms)
+AlumniMailer#test_mail: processed outbound mail in 21.0ms
+Sent mail to vishesh.ruparelia@iiitb.org (4072.3ms)
+Date: Wed, 08 Nov 2017 18:30:53 +0530
+From: from@example.com
+To: vishesh.ruparelia@iiitb.org
+Message-ID: <5a030005927fd_43f1233de8c99562@vishesh-Inspiron-5559.mail>
+Subject: vfb
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    cdsvfdb&lt;br /&gt;&lt;br /&gt;dsvfd
+
+  </body>
+</html>
+
+  Rendering alumni_mailer/test_mail.html.erb within layouts/mailer
+  Rendered alumni_mailer/test_mail.html.erb within layouts/mailer (0.1ms)
+AlumniMailer#test_mail: processed outbound mail in 22.8ms
+Sent mail to  (2.2ms)
+Date: Wed, 08 Nov 2017 18:30:57 +0530
+From: from@example.com
+Message-ID: <5a030009aa469_43f1233de8c9969e@vishesh-Inspiron-5559.mail>
+Subject: vfb
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    cdsvfdb&lt;br /&gt;&lt;br /&gt;dsvfd
+
+  </body>
+</html>
+
+Redirected to http://localhost:3000/admin/alumnus
+Completed 302 Found in 8298ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/alumnus" for 127.0.0.1 at 2017-11-08 18:30:57 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE ('t'='t') ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (50.1ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.9ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (10.8ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.6ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (9.0ms)
+Completed 200 OK in 166ms (Views: 154.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/admin/alumnus/bulk_action" for 127.0.0.1 at 2017-11-08 18:32:36 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RailsAdmin::MainController#bulk_action as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZNwzejrZuJzfHZD42Q2kqSnQii3RSiM0wHseSfKJJ4zpDsEeNT3z2da1tK1aHTIbupm3s9Ws9svYpH/UaKJt6w==", "bulk_action"=>"bulk_mail", "bulk_ids"=>["2"], "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT "alumni".* FROM "alumni" WHERE "alumni"."id" = 2 ORDER BY alumni.id desc[0m
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application (1.8ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.3ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (10.1ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.5ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (12.6ms)
+Completed 200 OK in 934ms (Views: 362.0ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/admin/alumnus/bulk_action" for 127.0.0.1 at 2017-11-08 18:32:48 +0530
+Processing by RailsAdmin::MainController#bulk_action as HTML
+  Parameters: {"authenticity_token"=>"OigW9iriNpsVjsNqJmXj41nuvqKWFNL/+29jRgALTIW3+uSSJQZ93hwm5z+ldXVRyqeDPJLyBwDjsALbmiAG4g==", "subject"=>"cvcb", "body"=>"cdsvf<br /><br />cdsvfd", "bulk_action"=>"bulk_mail", "bulk_ids"=>"[2]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering alumni_mailer/test_mail.html.erb within layouts/mailer
+  Rendered alumni_mailer/test_mail.html.erb within layouts/mailer (4.6ms)
+AlumniMailer#test_mail: processed outbound mail in 10.1ms
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (Missing partial cdsvf<br /><br /_>cdsvfd with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder, :haml]}. Searched in:
+  * "/home/vishesh/Desktop/Zense/alumni-dashboard/app/views"
+  * "/home/vishesh/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.3.0/app/views"
+  * "/home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views"
+  * "/home/vishesh/.rvm/gems/ruby-2.4.1/gems/kaminari-core-1.1.0/app/views"
+):
+    1: <%= render @body %>
+  
+app/views/alumni_mailer/test_mail.html.erb:1:in `_app_views_alumni_mailer_test_mail_html_erb___4459724859916128637_70185718277160'
+app/mailers/alumni_mailer.rb:6:in `test_mail'
+config/initializers/rails_admin.rb:51:in `block (3 levels) in <class:BulkMail>'
+config/initializers/rails_admin.rb:24:in `each'
+config/initializers/rails_admin.rb:24:in `block (2 levels) in <class:BulkMail>'
+Started POST "/admin/alumnus/bulk_action" for 127.0.0.1 at 2017-11-08 18:41:19 +0530
+Processing by RailsAdmin::MainController#bulk_action as HTML
+  Parameters: {"authenticity_token"=>"OigW9iriNpsVjsNqJmXj41nuvqKWFNL/+29jRgALTIW3+uSSJQZ93hwm5z+ldXVRyqeDPJLyBwDjsALbmiAG4g==", "subject"=>"cvcb", "body"=>"cdsvf<br /><br />cdsvfd", "bulk_action"=>"bulk_mail", "bulk_ids"=>"[2]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.5ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering alumni_mailer/test_mail.html.erb within layouts/mailer
+  Rendered alumni_mailer/test_mail.html.erb within layouts/mailer (0.4ms)
+AlumniMailer#test_mail: processed outbound mail in 118.5ms
+Sent mail to vishesh.ruparelia@iiitb.org (4062.3ms)
+Date: Wed, 08 Nov 2017 18:41:19 +0530
+From: from@example.com
+To: vishesh.ruparelia@iiitb.org
+Message-ID: <5a030277e8779_45691d467e09638e@vishesh-Inspiron-5559.mail>
+Subject: cvcb
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    @body
+
+  </body>
+</html>
+
+Redirected to http://localhost:3000/admin/alumnus
+Completed 302 Found in 4210ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/alumnus" for 127.0.0.1 at 2017-11-08 18:41:24 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.6ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE ('t'='t') ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (60.1ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.0ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (8.5ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.4ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (9.6ms)
+Completed 200 OK in 174ms (Views: 155.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/admin/alumnus/bulk_action" for 127.0.0.1 at 2017-11-08 18:42:02 +0530
+Processing by RailsAdmin::MainController#bulk_action as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qD58xFgESn6TrprnzBSI+i5ZxLB1wqa/B4gfV3Qk3Dcl7I6gV+ABO5oGvrJPBB5IvRD5LnEkc0AfV37K7g+WUA==", "bulk_action"=>"bulk_mail", "bulk_ids"=>["2"], "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT "alumni".* FROM "alumni" WHERE "alumni"."id" = 2 ORDER BY alumni.id desc[0m
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application (2.1ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.3ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (10.5ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.8ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (10.1ms)
+Completed 200 OK in 136ms (Views: 118.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/admin/alumnus/bulk_action" for 127.0.0.1 at 2017-11-08 18:42:08 +0530
+Processing by RailsAdmin::MainController#bulk_action as HTML
+  Parameters: {"authenticity_token"=>"+uWse+znYkM1H4SLxS0vn/TIBb9bzzkjbXKIE6ytmEB3N14f4wMpBjy3oN5GPbktZ4E4IV8p7Nx1remONobSJw==", "subject"=>"sdsfgd", "body"=>"<strong>zvxbfgn</strong>", "bulk_action"=>"bulk_mail", "bulk_ids"=>"[2]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering alumni_mailer/test_mail.html.erb within layouts/mailer
+  Rendered alumni_mailer/test_mail.html.erb within layouts/mailer (0.6ms)
+AlumniMailer#test_mail: processed outbound mail in 7.7ms
+Sent mail to vishesh.ruparelia@iiitb.org (3709.9ms)
+Date: Wed, 08 Nov 2017 18:42:08 +0530
+From: from@example.com
+To: vishesh.ruparelia@iiitb.org
+Message-ID: <5a0302a899711_45691d45dcc964e@vishesh-Inspiron-5559.mail>
+Subject: sdsfgd
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <html>
+&lt;strong&gt;zvxbfgn&lt;/strong&gt;
+</html>
+
+  </body>
+</html>
+
+Redirected to http://localhost:3000/admin/alumnus
+Completed 302 Found in 3736ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/alumnus" for 127.0.0.1 at 2017-11-08 18:42:12 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.4ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.4ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE ('t'='t') ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (55.2ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.0ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (9.5ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.6ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (7.6ms)
+Completed 200 OK in 170ms (Views: 156.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/admin/alumnus/bulk_action" for 127.0.0.1 at 2017-11-08 18:42:51 +0530
+Processing by RailsAdmin::MainController#bulk_action as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LdG5WfXs0fi/ZI/00HQYopHf30jwnGT7MklQG0OhszygA0s9+giavbbMq6FTZI4QApbi1vR6sQQqljGG2Yr5Ww==", "bulk_action"=>"bulk_mail", "bulk_ids"=>["2"], "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.7ms)[0m  [1m[34mSELECT "alumni".* FROM "alumni" WHERE "alumni"."id" = 2 ORDER BY alumni.id desc[0m
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application (4.2ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.1ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (10.3ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (3.2ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (8.6ms)
+Completed 200 OK in 125ms (Views: 110.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/admin/alumnus/bulk_action" for 127.0.0.1 at 2017-11-08 18:42:58 +0530
+Processing by RailsAdmin::MainController#bulk_action as HTML
+  Parameters: {"authenticity_token"=>"xxP/0mMjPHGmofEblh2ti3ZYUECBb+nAXwXY5LRwQJdKwQ22bMd3NK8J1U4VDTs55RFt3oWJPD9H2rl5LlsK8A==", "subject"=>"scadfsfdg", "body"=>"xcdvfbd<br /><br />dsafsgdhgf", "bulk_action"=>"bulk_mail", "bulk_ids"=>"[2]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.1ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering alumni_mailer/test_mail.html.erb within layouts/mailer
+  Rendered alumni_mailer/test_mail.html.erb within layouts/mailer (0.4ms)
+AlumniMailer#test_mail: processed outbound mail in 6.7ms
+Sent mail to vishesh.ruparelia@iiitb.org (3887.7ms)
+Date: Wed, 08 Nov 2017 18:42:58 +0530
+From: from@example.com
+To: vishesh.ruparelia@iiitb.org
+Message-ID: <5a0302da9a986_45691d4644896558@vishesh-Inspiron-5559.mail>
+Subject: scadfsfdg
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <html>
+xcdvfbd&lt;br /&gt;&lt;br /&gt;dsafsgdhgf
+</html>
+
+  </body>
+</html>
+
+Redirected to http://localhost:3000/admin/alumnus
+Completed 302 Found in 3911ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/alumnus" for 127.0.0.1 at 2017-11-08 18:43:02 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.6ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.4ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE ('t'='t') ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (57.0ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.0ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (9.3ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.4ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (7.9ms)
+Completed 200 OK in 167ms (Views: 150.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/alumnus/bulk_mail?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-11-08 18:47:40 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/pjax
+  [1m[36mAlumnus Load (0.5ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/pjax (2.6ms)
+Completed 200 OK in 40ms (Views: 25.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/alumnus/bulk_mail" for 127.0.0.1 at 2017-11-08 18:47:42 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.9ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application (2.0ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (6.4ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (12.1ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.7ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (9.4ms)
+Completed 200 OK in 155ms (Views: 139.1ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/admin/alumnus/bulk_mail" for 127.0.0.1 at 2017-11-08 18:47:49 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"authenticity_token"=>"xRz0tl646ya9YOCyZ1GU5Lx3RMvcsZa1d1zQJ19fyNFIzgbSUVygY7TIxOfkQQJWLz55VdhXQ0pvg7G6xXSCtg==", "subject"=>"dsfgdfhn", "body"=>"sdvfbg<br /><br />sdfd", "bulk_action"=>"bulk_mail", "bulk_ids"=>"[5,3,2,1]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.1ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.1ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.1ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.1ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering alumni_mailer/test_mail.html.erb within layouts/mailer
+  Rendered alumni_mailer/test_mail.html.erb within layouts/mailer (0.5ms)
+AlumniMailer#test_mail: processed outbound mail in 7.4ms
+Sent mail to  (1.2ms)
+Date: Wed, 08 Nov 2017 18:47:49 +0530
+From: from@example.com
+Message-ID: <5a0303fda416d_45691d4644896677@vishesh-Inspiron-5559.mail>
+Subject: dsfgdfhn
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <html>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+sdvfbg&lt;br /&gt;&lt;br /&gt;sdfd
+</html>
+
+  </body>
+</html>
+
+  Rendering alumni_mailer/test_mail.html.erb within layouts/mailer
+  Rendered alumni_mailer/test_mail.html.erb within layouts/mailer (0.1ms)
+AlumniMailer#test_mail: processed outbound mail in 6.2ms
+Sent mail to vibhavagarwal5@gmail.com (4375.7ms)
+Date: Wed, 08 Nov 2017 18:47:49 +0530
+From: from@example.com
+To: vibhavagarwal5@gmail.com
+Message-ID: <5a0303fda614d_45691d4644896742@vishesh-Inspiron-5559.mail>
+Subject: dsfgdfhn
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <html>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+sdvfbg&lt;br /&gt;&lt;br /&gt;sdfd
+</html>
+
+  </body>
+</html>
+
+  Rendering alumni_mailer/test_mail.html.erb within layouts/mailer
+  Rendered alumni_mailer/test_mail.html.erb within layouts/mailer (0.1ms)
+AlumniMailer#test_mail: processed outbound mail in 18.6ms
+Sent mail to vishesh.ruparelia@iiitb.org (3769.9ms)
+Date: Wed, 08 Nov 2017 18:47:54 +0530
+From: from@example.com
+To: vishesh.ruparelia@iiitb.org
+Message-ID: <5a0304021308b_45691d46448968a6@vishesh-Inspiron-5559.mail>
+Subject: dsfgdfhn
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <html>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+sdvfbg&lt;br /&gt;&lt;br /&gt;sdfd
+</html>
+
+  </body>
+</html>
+
+  Rendering alumni_mailer/test_mail.html.erb within layouts/mailer
+  Rendered alumni_mailer/test_mail.html.erb within layouts/mailer (0.2ms)
+AlumniMailer#test_mail: processed outbound mail in 24.9ms
+Sent mail to  (6.2ms)
+Date: Wed, 08 Nov 2017 18:47:57 +0530
+From: from@example.com
+Message-ID: <5a030405d6790_45691d4644896923@vishesh-Inspiron-5559.mail>
+Subject: dsfgdfhn
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <html>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+sdvfbg&lt;br /&gt;&lt;br /&gt;sdfd
+</html>
+
+  </body>
+</html>
+
+Redirected to http://localhost:3000/admin/alumnus
+Completed 302 Found in 8233ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/alumnus" for 127.0.0.1 at 2017-11-08 18:47:57 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.7ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE ('t'='t') ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (62.9ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.7ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (12.5ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (4.1ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (8.5ms)
+Completed 200 OK in 197ms (Views: 180.6ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/admin/alumnus/bulk_action" for 127.0.0.1 at 2017-11-08 18:54:27 +0530
+Processing by RailsAdmin::MainController#bulk_action as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XCitc9ifK6jIY21jbbu2SREPQ0vOBkfhbWIH32DiLP/R+l8X13tg7cHLSTbuqyD7gkZ+1crgkh51vWZC+slmmA==", "bulk_action"=>"bulk_mail", "bulk_ids"=>["2"], "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.5ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT "alumni".* FROM "alumni" WHERE "alumni"."id" = 2 ORDER BY alumni.id desc[0m
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application (2.1ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.0ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (12.4ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.8ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (9.4ms)
+Completed 200 OK in 144ms (Views: 124.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/admin/alumnus/bulk_action" for 127.0.0.1 at 2017-11-08 18:54:33 +0530
+Processing by RailsAdmin::MainController#bulk_action as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XCitc9ifK6jIY21jbbu2SREPQ0vOBkfhbWIH32DiLP/R+l8X13tg7cHLSTbuqyD7gkZ+1crgkh51vWZC+slmmA==", "bulk_action"=>"bulk_mail", "bulk_ids"=>["2"], "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.8ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT "alumni".* FROM "alumni" WHERE "alumni"."id" = 2 ORDER BY alumni.id desc[0m
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application (2.4ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.7ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (10.0ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.7ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (10.6ms)
+Completed 200 OK in 158ms (Views: 133.0ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/admin/alumnus/bulk_action" for 127.0.0.1 at 2017-11-08 18:54:50 +0530
+Processing by RailsAdmin::MainController#bulk_action as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XCitc9ifK6jIY21jbbu2SREPQ0vOBkfhbWIH32DiLP/R+l8X13tg7cHLSTbuqyD7gkZ+1crgkh51vWZC+slmmA==", "bulk_action"=>"bulk_mail", "bulk_ids"=>["2"], "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (1.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.4ms)[0m  [1m[34mSELECT "alumni".* FROM "alumni" WHERE "alumni"."id" = 2 ORDER BY alumni.id desc[0m
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application (2.5ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.1ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (11.8ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.6ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (10.2ms)
+Completed 200 OK in 166ms (Views: 141.6ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/admin/alumnus/bulk_action" for 127.0.0.1 at 2017-11-08 18:54:56 +0530
+Processing by RailsAdmin::MainController#bulk_action as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XCitc9ifK6jIY21jbbu2SREPQ0vOBkfhbWIH32DiLP/R+l8X13tg7cHLSTbuqyD7gkZ+1crgkh51vWZC+slmmA==", "bulk_action"=>"bulk_mail", "bulk_ids"=>["2"], "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.4ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT "alumni".* FROM "alumni" WHERE "alumni"."id" = 2 ORDER BY alumni.id desc[0m
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application (1.7ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.4ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (9.3ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (5.1ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (8.0ms)
+Completed 200 OK in 142ms (Views: 121.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/admin/alumnus/bulk_action" for 127.0.0.1 at 2017-11-08 18:55:10 +0530
+Processing by RailsAdmin::MainController#bulk_action as HTML
+  Parameters: {"authenticity_token"=>"E8yGvV4e0rWYq9oo2yCYLm4g0qwtMMT8mgBtGn/remqeHnTZUfqZ8JED/n1YMA6c/WnvMinWEQOC3wyH5cAwDQ==", "subject"=>"", "body"=>"vdsfdbg&nbsp;<br /><br />vcbd", "bulk_action"=>"bulk_mail", "bulk_ids"=>"[2]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY alumni.id desc[0m  [["id", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application (1.4ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.1ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (9.3ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (4.3ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (8.0ms)
+Completed 200 OK in 123ms (Views: 107.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/admin/alumnus/bulk_action" for 127.0.0.1 at 2017-11-08 18:55:37 +0530
+Processing by RailsAdmin::MainController#bulk_action as HTML
+  Parameters: {"authenticity_token"=>"QUGYsmI7KNzYFtOLhTsQ4tyf2EBuydlPH43QLKN7VpbMk2rWbd9jmdG+994GK4ZQT9bl3movDLAHUrGxOVAc8Q==", "subject"=>"dsfsg", "body"=>"cv<br /><br />dsfdbg", "bulk_action"=>"bulk_mail", "bulk_ids"=>"[]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin/alumnus
+Completed 302 Found in 15ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/alumnus" for 127.0.0.1 at 2017-11-08 18:55:37 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.4ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE ('t'='t') ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (55.5ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.7ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (10.6ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.7ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (10.1ms)
+Completed 200 OK in 174ms (Views: 161.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/admin/alumnus/bulk_action" for 127.0.0.1 at 2017-11-08 18:55:56 +0530
+Processing by RailsAdmin::MainController#bulk_action as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dULE+UkZJqlvrDthEukZrqRuds0YeVPnSLTdfdrCkCn4kDadRv1t7GYEHzSR+Y8cNydLUxyfhhhQa7zgQOnaTg==", "bulk_action"=>"bulk_mail", "bulk_ids"=>["2"], "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT "alumni".* FROM "alumni" WHERE "alumni"."id" = 2 ORDER BY alumni.id desc[0m
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application (1.8ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.8ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (10.9ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.6ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (7.8ms)
+Completed 200 OK in 138ms (Views: 119.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/admin/alumnus/bulk_action" for 127.0.0.1 at 2017-11-08 18:56:04 +0530
+Processing by RailsAdmin::MainController#bulk_action as HTML
+  Parameters: {"authenticity_token"=>"N3m3p4HU7jUkE4Y5WqgSBpxn4JJCJk3tAXzjf/Wfxhi6q0XDjjClcC27omzZuIS0Dy7dDEbAmBIZo4Lib7SMfw==", "subject"=>"csadsvf", "body"=>"cvcsbd<br /><br />asfdsvfdb", "bulk_action"=>"bulk_mail", "bulk_ids"=>"[2]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.1ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering alumni_mailer/test_mail.html.erb within layouts/mailer
+  Rendered alumni_mailer/test_mail.html.erb within layouts/mailer (0.5ms)
+AlumniMailer#test_mail: processed outbound mail in 7.3ms
+Sent mail to vishesh.ruparelia@iiitb.org (4318.4ms)
+Date: Wed, 08 Nov 2017 18:56:04 +0530
+From: from@example.com
+To: vishesh.ruparelia@iiitb.org
+Message-ID: <5a0305ec526fe_45691d467e097081@vishesh-Inspiron-5559.mail>
+Subject: csadsvf
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <html>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+cvcsbd<br /><br />asfdsvfdb
+</html>
+
+  </body>
+</html>
+
+Redirected to http://localhost:3000/admin/alumnus
+Completed 302 Found in 4341ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/alumnus" for 127.0.0.1 at 2017-11-08 18:56:08 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.6ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE ('t'='t') ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (71.2ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.8ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (11.7ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.7ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (10.5ms)
+Completed 200 OK in 208ms (Views: 191.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/alumnus/bulk_mail?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-11-08 18:56:25 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.9ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/pjax
+  [1m[36mAlumnus Load (0.5ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/pjax (3.1ms)
+Completed 200 OK in 49ms (Views: 23.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/alumnus/bulk_mail" for 127.0.0.1 at 2017-11-08 18:56:26 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.7ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application (2.2ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.2ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (8.8ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (3.2ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (8.7ms)
+Completed 200 OK in 126ms (Views: 112.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/admin/alumnus/bulk_mail" for 127.0.0.1 at 2017-11-08 18:56:38 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"authenticity_token"=>"Ruaarqp4HkTAaVLMlbY26uCL5gwHM1TJpmBmnpqZTo3LNGjKpZxVAcnBdpkWpqBYc8LbkgPVgTa+vwcDALIE6g==", "subject"=>"czvc", "body"=>"<strong>xczvcxb</strong>", "bulk_action"=>"bulk_mail", "bulk_ids"=>"[5,3,2,1]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.6ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.1ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.1ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering alumni_mailer/test_mail.html.erb within layouts/mailer
+  Rendered alumni_mailer/test_mail.html.erb within layouts/mailer (0.5ms)
+AlumniMailer#test_mail: processed outbound mail in 8.3ms
+Sent mail to  (1.6ms)
+Date: Wed, 08 Nov 2017 18:56:38 +0530
+From: from@example.com
+Message-ID: <5a03060e1cc2a_45691d467e0971a4@vishesh-Inspiron-5559.mail>
+Subject: czvc
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <html>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+<strong>xczvcxb</strong>
+</html>
+
+  </body>
+</html>
+
+  Rendering alumni_mailer/test_mail.html.erb within layouts/mailer
+  Rendered alumni_mailer/test_mail.html.erb within layouts/mailer (0.1ms)
+AlumniMailer#test_mail: processed outbound mail in 7.3ms
+Sent mail to vibhavagarwal5@gmail.com (3704.0ms)
+Date: Wed, 08 Nov 2017 18:56:38 +0530
+From: from@example.com
+To: vibhavagarwal5@gmail.com
+Message-ID: <5a03060e1f698_45691d467e0972f1@vishesh-Inspiron-5559.mail>
+Subject: czvc
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <html>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+<strong>xczvcxb</strong>
+</html>
+
+  </body>
+</html>
+
+  Rendering alumni_mailer/test_mail.html.erb within layouts/mailer
+  Rendered alumni_mailer/test_mail.html.erb within layouts/mailer (0.3ms)
+AlumniMailer#test_mail: processed outbound mail in 22.7ms
+Sent mail to vishesh.ruparelia@iiitb.org (3656.8ms)
+Date: Wed, 08 Nov 2017 18:56:41 +0530
+From: from@example.com
+To: vishesh.ruparelia@iiitb.org
+Message-ID: <5a030611d1d20_45691d467e09737d@vishesh-Inspiron-5559.mail>
+Subject: czvc
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <html>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+<strong>xczvcxb</strong>
+</html>
+
+  </body>
+</html>
+
+  Rendering alumni_mailer/test_mail.html.erb within layouts/mailer
+  Rendered alumni_mailer/test_mail.html.erb within layouts/mailer (0.2ms)
+AlumniMailer#test_mail: processed outbound mail in 25.2ms
+Sent mail to  (2.7ms)
+Date: Wed, 08 Nov 2017 18:56:45 +0530
+From: from@example.com
+Message-ID: <5a03061584c69_45691d467e09748@vishesh-Inspiron-5559.mail>
+Subject: czvc
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <html>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+<strong>xczvcxb</strong>
+</html>
+
+  </body>
+</html>
+
+Redirected to http://localhost:3000/admin/alumnus
+Completed 302 Found in 7452ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/alumnus" for 127.0.0.1 at 2017-11-08 18:56:45 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE ('t'='t') ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (51.1ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.2ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (9.2ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.6ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (6.6ms)
+Completed 200 OK in 170ms (Views: 160.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/alumnus/bulk_mail?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-11-08 18:57:24 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.4ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/pjax
+  [1m[36mAlumnus Load (0.9ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/pjax (4.1ms)
+Completed 200 OK in 51ms (Views: 31.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/alumnus/bulk_mail" for 127.0.0.1 at 2017-11-08 18:57:26 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (1.4ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.4ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application (3.0ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (6.8ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (11.5ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.6ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (7.3ms)
+Completed 200 OK in 156ms (Views: 119.6ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/admin/alumnus/bulk_mail" for 127.0.0.1 at 2017-11-08 18:57:34 +0530
+Processing by RailsAdmin::MainController#bulk_mail as HTML
+  Parameters: {"authenticity_token"=>"UDZcU3aeNk4Bebep2Qj20zJ9jBYW/l7TkWTsCtrBXGbd5K43eXp9CwjRk/xaGGBhoTSxiBIYiyyJu42XQOoWAQ==", "subject"=>"zvcb", "body"=>"czvc<strong>zcvxvc&nbsp;</strong>", "bulk_action"=>"bulk_mail", "bulk_ids"=>"[5,3,2,1]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.1ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.1ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.1ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.1ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering alumni_mailer/test_mail.html.erb within layouts/mailer
+  Rendered alumni_mailer/test_mail.html.erb within layouts/mailer (0.4ms)
+AlumniMailer#test_mail: processed outbound mail in 7.2ms
+Sent mail to  (1.1ms)
+Date: Wed, 08 Nov 2017 18:57:34 +0530
+From: from@example.com
+Message-ID: <5a0306469b871_45691d467e0975ac@vishesh-Inspiron-5559.mail>
+Subject: zvcb
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <html>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+czvc<strong>zcvxvc&nbsp;</strong>
+</html>
+
+  </body>
+</html>
+
+  Rendering alumni_mailer/test_mail.html.erb within layouts/mailer
+  Rendered alumni_mailer/test_mail.html.erb within layouts/mailer (0.1ms)
+AlumniMailer#test_mail: processed outbound mail in 6.7ms
+Sent mail to vibhavagarwal5@gmail.com (3918.7ms)
+Date: Wed, 08 Nov 2017 18:57:34 +0530
+From: from@example.com
+To: vibhavagarwal5@gmail.com
+Message-ID: <5a0306469d971_45691d467e097671@vishesh-Inspiron-5559.mail>
+Subject: zvcb
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <html>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+czvc<strong>zcvxvc&nbsp;</strong>
+</html>
+
+  </body>
+</html>
+
+  Rendering alumni_mailer/test_mail.html.erb within layouts/mailer
+  Rendered alumni_mailer/test_mail.html.erb within layouts/mailer (0.2ms)
+AlumniMailer#test_mail: processed outbound mail in 25.4ms
+Sent mail to vishesh.ruparelia@iiitb.org (3879.3ms)
+Date: Wed, 08 Nov 2017 18:57:38 +0530
+From: from@example.com
+To: vishesh.ruparelia@iiitb.org
+Message-ID: <5a03064a91871_45691d467e097718@vishesh-Inspiron-5559.mail>
+Subject: zvcb
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <html>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+czvc<strong>zcvxvc&nbsp;</strong>
+</html>
+
+  </body>
+</html>
+
+  Rendering alumni_mailer/test_mail.html.erb within layouts/mailer
+  Rendered alumni_mailer/test_mail.html.erb within layouts/mailer (0.1ms)
+AlumniMailer#test_mail: processed outbound mail in 22.3ms
+Sent mail to  (1.8ms)
+Date: Wed, 08 Nov 2017 18:57:42 +0530
+From: from@example.com
+Message-ID: <5a03064e7a14a_45691d467e09783d@vishesh-Inspiron-5559.mail>
+Subject: zvcb
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <html>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+czvc<strong>zcvxvc&nbsp;</strong>
+</html>
+
+  </body>
+</html>
+
+Redirected to http://localhost:3000/admin/alumnus
+Completed 302 Found in 7886ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/alumnus" for 127.0.0.1 at 2017-11-08 18:57:42 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE ('t'='t') ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (48.2ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.0ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (10.3ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (3.4ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (7.6ms)
+Completed 200 OK in 156ms (Views: 147.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/admin/alumnus/bulk_action" for 127.0.0.1 at 2017-11-08 19:02:54 +0530
+Processing by RailsAdmin::MainController#bulk_action as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VBZ1eIVeIZtRM4NOMLho/3s+OzMT8CUSn6vU0ovp43LZxIccirpq3libpxuzqP5N6HcGrRcW8O2HdLVPEcKpFQ==", "bulk_action"=>"bulk_mail", "bulk_ids"=>["2"], "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.4ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT "alumni".* FROM "alumni" WHERE "alumni"."id" = 2 ORDER BY alumni.id desc[0m
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application (1.7ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (7.3ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (12.1ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.5ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (9.3ms)
+Completed 200 OK in 133ms (Views: 113.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/admin/alumnus/bulk_action" for 127.0.0.1 at 2017-11-08 19:04:01 +0530
+Processing by RailsAdmin::MainController#bulk_action as HTML
+  Parameters: {"authenticity_token"=>"K9XejPjbTIf+u9VfJB1aslk2+VPdkqiqvgd98qTs3yqmByzo9z8HwvcT8QqnDcwAyn/Ezdl0fVWm2BxvPseVTQ==", "subject"=>"cdsvfdbg", "body"=>"cdsfd<strong>dsfdbg<br /><br /><br /></strong>dvfbdg<em>dfdbgf</em><br /><em>sdffdgfbgn</em><br /><em>sdvfbcgnvcxbvc b<br /><br /><span style=\"text-decoration: line-through;\"> cvcbv</span></em>", "bulk_action"=>"bulk_mail", "bulk_ids"=>"[2]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.4ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.2ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering alumni_mailer/test_mail.html.erb within layouts/mailer
+  Rendered alumni_mailer/test_mail.html.erb within layouts/mailer (0.5ms)
+AlumniMailer#test_mail: processed outbound mail in 6.9ms
+Sent mail to vishesh.ruparelia@iiitb.org (3596.7ms)
+Date: Wed, 08 Nov 2017 19:04:01 +0530
+From: from@example.com
+To: vishesh.ruparelia@iiitb.org
+Message-ID: <5a0307c99d28f_45691d45b109796d@vishesh-Inspiron-5559.mail>
+Subject: cdsvfdbg
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    cdsfd<strong>dsfdbg<br /><br /><br /></strong>dvfbdg<em>dfdbgf</em><br /><em>sdffdgfbgn</em><br /><em>sdvfbcgnvcxbvc b<br /><br /><span style="text-decoration: line-through;"> cvcbv</span></em>
+
+  </body>
+</html>
+
+Redirected to http://localhost:3000/admin/alumnus
+Completed 302 Found in 3622ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/alumnus" for 127.0.0.1 at 2017-11-08 19:04:05 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (1.1ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE ('t'='t') ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (68.3ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.3ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (9.1ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (4.1ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (7.1ms)
+Completed 200 OK in 205ms (Views: 172.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/admin/alumnus/bulk_action" for 127.0.0.1 at 2017-11-08 19:05:05 +0530
+Processing by RailsAdmin::MainController#bulk_action as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EfqMSAXzd8tp1PRKyHPmVy92G9KyFj7fDan6eUEz6/KcKH4sChc8jmB80B9LY3DlvD8mTLbw6yAVdpvk2xihlQ==", "bulk_action"=>"bulk_mail", "bulk_ids"=>["2"], "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.4ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.4ms)[0m  [1m[34mSELECT "alumni".* FROM "alumni" WHERE "alumni"."id" = 2 ORDER BY alumni.id desc[0m
+  Rendered rails_admin/main/bulk_mail.html.erb within layouts/rails_admin/application (2.1ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.8ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (10.1ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (3.1ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (10.1ms)
+Completed 200 OK in 131ms (Views: 116.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/admin/alumnus/bulk_action" for 127.0.0.1 at 2017-11-08 19:05:37 +0530
+Processing by RailsAdmin::MainController#bulk_action as HTML
+  Parameters: {"authenticity_token"=>"699qIN2WGAbyh5DCEO93+7OMzCqidau0kM1L+GjszOlmDZhE0nJTQ/svtJeT/+FJIMXxtKaTfkuIEipl8seGjg==", "subject"=>"cdvfbg", "body"=>"cdvsfddsgfdhg<br /><br /><em>fssdsgfdgf<br /><br /></em>dfbg<br /><strong><em><br /></em></strong>sfdsfdb<strong>sfdfgbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</strong>", "bulk_action"=>"bulk_mail", "bulk_ids"=>"[2]", "model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAlumnus Load (0.1ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering alumni_mailer/test_mail.html.erb within layouts/mailer
+  Rendered alumni_mailer/test_mail.html.erb within layouts/mailer (0.5ms)
+AlumniMailer#test_mail: processed outbound mail in 7.4ms
+Sent mail to vishesh.ruparelia@iiitb.org (3582.3ms)
+Date: Wed, 08 Nov 2017 19:05:37 +0530
+From: from@example.com
+To: vishesh.ruparelia@iiitb.org
+Message-ID: <5a030829d3875_45691d45dcc98097@vishesh-Inspiron-5559.mail>
+Subject: cdvfbg
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    cdvsfddsgfdhg<br /><br /><em>fssdsgfdgf<br /><br /></em>dfbg<br /><strong><em><br /></em></strong>sfdsfdb<strong>sfdfgbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</strong>
+
+  </body>
+</html>
+
+Redirected to http://localhost:3000/admin/alumnus
+Completed 302 Found in 3607ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/alumnus" for 127.0.0.1 at 2017-11-08 19:05:41 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"alumnus"}
+  [1m[36mAlumnus Load (0.9ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE "alumni"."id" = ? ORDER BY "alumni"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mAlumnus Load (0.3ms)[0m  [1m[34mSELECT  "alumni".* FROM "alumni" WHERE ('t'='t') ORDER BY alumni.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (62.3ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.3ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (9.6ms)
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.5ms)
+  Rendering /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/vishesh/.rvm/gems/ruby-2.4.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (8.3ms)
+Completed 200 OK in 181ms (Views: 159.9ms | ActiveRecord: 1.2ms)
+
+

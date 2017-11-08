@@ -1,22 +1,10 @@
-<!-- Load TinyMCE -->
-<script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
-<script type="text/javascript">
-tinymce.init({
-    selector:'textarea',
-  // theme: 'modern',
-  // width: 500,
-  // height: 300,
-  // plugins: [
-  //       "advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker",
-  //       "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
-  //       "save table contextmenu directionality emoticons template textcolor paste fullpage textcolor colorpicker"
-  //   ],
-  // content_css: 'css/content.css',
-  // toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons'
-  forced_root_block : false,
-});
-</script>
+<!-- Include external CSS. -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.css">
 
+    <!-- Include Editor style. -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.1/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.1/css/froala_style.min.css" rel="stylesheet" type="text/css" />
 <form method="post" action="">
     <p>
         <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
@@ -27,7 +15,7 @@ tinymce.init({
     </p>
     <p>
         <label for="body">Body:</label>
-        <textarea name="body" cols="60" rows="18"></textarea>
+        <textarea name="body"></textarea>
     </p>
 
     <p>
@@ -39,3 +27,12 @@ tinymce.init({
     <input hidden name="model_name" value="alumni">
 
 </form>
+
+    <!-- Include Editor JS files. -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.1/js/froala_editor.pkgd.min.js"></script>
+
+    <!-- Initialize the editor. -->
+    <script>
+    $.getScript("https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.1/js/froala_editor.pkgd.min.js", function () { $('textarea').froalaEditor()}); 
+
+    </script>

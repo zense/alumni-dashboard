@@ -18,6 +18,7 @@ class AlumniController < ApplicationController
       redirect_to root_path
       return
     end
+    redirect_to root_path
   end
   # GET /alumni/new
   def new

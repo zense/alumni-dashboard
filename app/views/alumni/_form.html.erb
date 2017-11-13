@@ -1,4 +1,4 @@
-<%= form_with(model: alumnus, local: true) do |form| %>
+<%= form_with(model: alumnus, local: true,:html => {:class => "form-horizontal center"}) do |form| %>
   <% if alumnus.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(alumnus.errors.count, "error") %> prohibited this alumnus from being saved:</h2>
@@ -11,62 +11,87 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :roll_no %>
-    <%= form.number_field :roll_no, id: :alumnus_roll_no %>
+  <div class="form-group">
+    <%= form.label :roll_no, class: "col-md-1 control-label" %>
+    <div class="col-md-9">
+      <%= form.number_field :roll_no, id: :alumnus_roll_no, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :alumnus_name %>
-  </div>
 
-  <div class="field">
-    <%= form.label :grad_year %>
-    <%= form.number_field :grad_year, id: :alumnus_grad_year %>
-  </div>
+    <div class="form-group">
+      <%= form.label :name , class: "col-md-1 control-label" %>
+      <div class="col-md-9">
+        <%= form.text_field :name, id: :alumnus_name, class: "form-control" %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= form.label :personal_mail %>
-    <%= form.text_field :personal_mail, id: :alumnus_personal_mail %>
-  </div>
+    <div class="form-group">
+      <%= form.label :grad_year , class: "col-md-1 control-label" %>
+      <div class="col-md-9">
+        <%= form.text_field :grad_year, id: :alumnus_grad_year, class: "form-control" %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= form.label :college_mail %>
-    <%= form.text_field :college_mail, id: :alumnus_college_mail %>
-  </div>
+    <div class="form-group">
+      <%= form.label :personal_mail , class: "col-md-1 control-label" %>
+      <div class="col-md-9">
+        <%= form.text_field :personal_mail, id: :alumnus_personal_mail, class: "form-control" %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= form.label :phone_no %>
-    <%= form.number_field :phone_no, id: :alumnus_phone_no %>
-  </div>
+    <div class="form-group">
+      <%= form.label :college_mail , class: "col-md-1 control-label" %>
+      <div class="col-md-9">
+        <%= form.text_field :college_mail, id: :alumnus_college_mail, class: "form-control" %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= form.label :company_name %>
-    <%= form.text_field :company_name, id: :alumnus_company_name %>
-  </div>
+    <div class="form-group">
+      <%= form.label :phone_no , class: "col-md-1 control-label" %>
+      <div class="col-md-9">
+        <%= form.text_field :phone_no, id: :alumnus_phone_no, class: "form-control" %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= form.label :designation %>
-    <%= form.text_field :designation, id: :alumnus_designation %>
-  </div>
+    <div class="form-group">
+      <%= form.label :company_name , class: "col-md-1 control-label" %>
+      <div class="col-md-9">
+        <%= form.text_field :company_name, id: :alumnus_company_name, class: "form-control" %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= form.label :location %>
-    <%= form.text_field :location, id: :alumnus_location %>
-  </div>
+    <div class="form-group">
+      <%= form.label :designation , class: "col-md-1 control-label" %>
+      <div class="col-md-9">
+        <%= form.text_field :designation, id: :alumnus_designation, class: "form-control" %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= form.label :linkedIn %>
-    <%= form.text_field :linkedIn, id: :alumnus_linkedIn %>
-  </div>
 
-  <div class="field">
-    <%= form.label :facebook %>
-    <%= form.text_field :facebook, id: :alumnus_facebook %>
-  </div>
+    <div class="form-group">
+      <%= form.label :location , class: "col-md-1 control-label" %>
+      <div class="col-md-9">
+        <%= form.text_field :location, id: :alumnus_location, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :linkedIn , class: "col-md-1 control-label" %>
+      <div class="col-md-9">
+        <%= form.text_field :linkedIn, id: :alumnus_linkedIn, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :facebook , class: "col-md-1 control-label" %>
+      <div class="col-md-9">
+        <%= form.text_field :facebook, id: :alumnus_facebook, class: "form-control" %>
+      </div>
+    </div>
+
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit%>
   </div>
 <% end %>

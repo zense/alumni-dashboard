@@ -17,6 +17,8 @@ gem 'rails_admin', '~>1.2'
 gem 'devise'
 gem 'cancancan'
 gem 'liquid', '~> 3.0', '>= 3.0.6'
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'jquery-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

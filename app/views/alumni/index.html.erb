@@ -4,6 +4,7 @@
   <%= link_to('Logout', destroy_alumnus_session_path, method: :delete) %>
   </li>
 </ul>
+<!--
 <table>
   <thead>
     <tr>
@@ -41,6 +42,50 @@
       </tr>
     <% #end %>
   </tbody>
-</table>
+</table> -->
 
-<br>
+<!-- Basic Table -->
+<div class="row clearfix">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="body table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Roll no</th>
+                            <th>Name</th>
+                            <th>Grad year</th>
+                            <th>Personal mail</th>
+                            <th>College mail</th>
+                            <th>Phone no</th>
+                            <th>Company name</th>
+                            <th>Designation</th>
+                            <th>Location</th>
+                            <th>Linkedin</th>
+                            <th>Facebook</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><%= @alumnus.roll_no %></td>
+                            <td><%= @alumnus.name %></td>
+                            <td><%= @alumnus.grad_year %></td>
+                            <td><%= @alumnus.personal_mail %></td>
+                            <td><%= @alumnus.college_mail %></td>
+                            <td><%= @alumnus.phone_no %></td>
+                            <td><%= @alumnus.company_name %></td>
+                            <td><%= @alumnus.designation %></td>
+                            <td><%= @alumnus.location %></td>
+                            <td><%= @alumnus.linkedIn %></td>
+                            <td><%= @alumnus.facebook %></td>
+                            <td><%= link_to 'Edit', edit_alumnus_path(@alumnus) %></td>
+                            <td><%= link_to 'Delete', @alumnus, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- #END# Basic Table -->

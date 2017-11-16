@@ -28,11 +28,31 @@
 
 </form>
 
+<div>
+    <p>
+        Following are the generic tags that can be used in the body or the subject of the mail:
+        <ul>
+            <li>Name: {{name}}</li>
+            <li>Roll No: {{roll_no}}</li>
+            <li>Graduation Year: {{grad_year}}</li>
+            <li>Personal Email: {{personal_mail}}</li>
+            <li>College Email: {{college_mail}}</li>
+            <li>Phone No: {{phone_no}}</li>
+            <li>Company Name: {{company_name}}</li>
+            <li>Designation: {{designation}}</li>
+            <li>Location(Address): {{location}}</li>
+            <li>LinkedIn ID: {{linkedIn}}</li>
+            <li>Facebook ID: {{facebook}}</li>
+
+        </ul>
+    </p>
+</div>
+
     <!-- Include Editor JS files. -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.1/js/froala_editor.pkgd.min.js"></script>
 
     <!-- Initialize the editor. -->
     <script>
-    $.getScript("https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.1/js/froala_editor.pkgd.min.js", function () { $('textarea').froalaEditor()}); 
+    $.getScript("https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.1/js/froala_editor.pkgd.min.js", function () { $('textarea').froalaEditor()});
 
     </script>

@@ -58,6 +58,10 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    carrierwave (1.2.1)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
     childprocess (0.8.0)
       ffi (~> 1.0, >= 1.0.11)
     coffee-rails (4.2.2)
@@ -245,6 +249,7 @@ DEPENDENCIES
   byebug
   cancancan
   capybara (~> 2.13)
+  carrierwave (~> 1.0)
   coffee-rails (~> 4.2)
   devise
   devise-bootstrap-views
@@ -266,4 +271,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.15.4
+   1.16.0

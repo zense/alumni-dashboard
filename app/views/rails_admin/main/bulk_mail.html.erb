@@ -5,7 +5,8 @@
     <!-- Include Editor style. -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.1/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.1/css/froala_style.min.css" rel="stylesheet" type="text/css" />
-<form method="post" action="">
+
+<form method="post" enctype="multipart/form-data" action="">
     <p>
         <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
     </p>
@@ -14,10 +15,13 @@
         <input name="subject" type="text" class="formbox">
     </p>
     <p>
+        <label for="attachment">Attachments:</label>
+        <input type="file" name="attachment" id="attachment">
+    </p>
+    <p>
         <label for="body">Body:</label>
         <textarea name="body"></textarea>
     </p>
-
     <p>
         <input type="submit" value="Send message">
     </p>

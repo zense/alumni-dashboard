@@ -17,6 +17,9 @@ module RailsAdmin
                         else
                             @subject=params[:subject]
                             @body=params[:body]
+                            @attachment=params[:attachment]
+                            uploader = AttachmentUploader.new
+                            uploader.store!(@attachment)
                             @body_temp = Liquid::Template.parse (@body)
                             @subject_temp = Liquid::Template.parse (@subject)
                             @objects=JSON.parse(params[:bulk_ids])

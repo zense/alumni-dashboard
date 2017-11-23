@@ -20,6 +20,7 @@ module RailsAdmin
                             @attachment=params[:attachment]
                             uploader = AttachmentUploader.new
                             uploader.store!(@attachment)
+                            @attachmentname=uploader.filename
                             @body_temp = Liquid::Template.parse (@body)
                             @subject_temp = Liquid::Template.parse (@subject)
                             @objects=JSON.parse(params[:bulk_ids])
@@ -51,7 +52,7 @@ module RailsAdmin
                                 'linkedIn'=>object.linkedIn ,
                                 'facebook'=>object.facebook
                                 )
-                                AlumniMailer.test_mail(object,@subject,@body).deliver
+                                AlumniMailer.test_mail(object,@subject,@body,@attachmentname).deliver
                             end
                             redirect_to back_or_index
                             flash[:success] = "#{@model_config.label} successfully mailed."

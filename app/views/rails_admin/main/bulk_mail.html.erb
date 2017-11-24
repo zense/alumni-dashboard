@@ -57,6 +57,10 @@
 
     <!-- Initialize the editor. -->
     <script>
-    $.getScript("https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.1/js/froala_editor.pkgd.min.js", function () { $('textarea').froalaEditor()});
+    $.getScript("https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.1/js/froala_editor.pkgd.min.js", function () {
+         $('textarea').froalaEditor({
+             height:300
+         })
+     });
 
     </script>

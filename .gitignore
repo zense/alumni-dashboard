@@ -20,5 +20,5 @@
 /node_modules
 /yarn-error.log
 /config/local_env.rb
+/public/attachments
 .byebug_history
- 

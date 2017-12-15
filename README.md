@@ -20,3 +20,9 @@ To use custom parser:
 
 -Write {{value}} when writing the body or subject of email,
     for eg. {{name}},{{email}},etc.
+
+
+#When deploying
+-Change smtp settings.
+-Change hostname in environment.rb for resetting passwords.
+-Add locale_env.rb

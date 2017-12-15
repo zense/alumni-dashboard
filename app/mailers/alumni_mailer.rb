@@ -10,4 +10,9 @@ class AlumniMailer < ApplicationMailer
         end
         mail(to: @user.personal_mail, subject: @subject)
     end
+
+    def send_welcome_message(user)
+      @user=user
+      mail(to: @user.email, subject: "Welcome to IIITB Alumni Network")
+    end
 end

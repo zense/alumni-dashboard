@@ -22,7 +22,9 @@ To use custom parser:
     for eg. {{name}},{{email}},etc.
 
 
-#When deploying
+# When deploying
 -Change smtp settings.
+
 -Change hostname in environment.rb for resetting passwords.
+
 -Add locale_env.rb

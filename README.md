@@ -8,7 +8,7 @@ Using Froala editor.
 # Important setup instructions:
 To set up your Gmail account set ENV variables as mentioned below:
 
--Add local_env.rb to /config
+- Add local_env.rb to /config
 
   Put this inside local_env.rb:
 
@@ -18,13 +18,13 @@ To set up your Gmail account set ENV variables as mentioned below:
 
 To use custom parser:
 
--Write {{value}} when writing the body or subject of email,
+- Write {{value}} when writing the body or subject of email,
     for eg. {{name}},{{email}},etc.
 
 
 # When deploying
--Change smtp settings.
+- Change smtp settings.
 
--Change hostname in environment.rb for resetting passwords.
+- Change hostname in environment.rb for resetting passwords.
 
--Add locale_env.rb
+- Add locale_env.rb

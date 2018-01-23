@@ -1,21 +1,3 @@
-<p id="notice"><%= notice %></p>
-
-
-<p>
-  <strong>Name:</strong>
-  <%= @event.name %>
-</p>
-<% @is_true=0 %>
-  <% @a.each do |reg| %>
-    <% if reg==@event.id %>
-      <% @is_true=1 %>
-    <% end %>
-  <% end %>
-  <% if @is_true==1 %>
-  <p><h2> Already Registered</h2></p>
-
-<% else %>
-
 <form class="form-horizontal center" action="/regs"  method="post">
 
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
@@ -112,9 +94,3 @@
     <input type="submit"  value="Update Alumnus"  />
   </div>
 </form>
-
-
-
-<% end %>
-
-<%= link_to 'Back', events_path %>

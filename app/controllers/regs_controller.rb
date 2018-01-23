@@ -26,7 +26,9 @@ class RegsController < ApplicationController
   # POST /regs
   # POST /regs.json
   def create
+    current_alumnus.update(alumnus_params)
     @reg = Reg.new(reg_params)
+
 
     respond_to do |format|
       if @reg.save
@@ -42,6 +44,7 @@ class RegsController < ApplicationController
   # PATCH/PUT /regs/1
   # PATCH/PUT /regs/1.json
   def update
+    # current_alumnus.update(alumnus_params)
     respond_to do |format|
       if @reg.update(reg_params)
         format.html { redirect_to @reg, notice: 'Reg was successfully updated.' }
@@ -78,5 +81,9 @@ class RegsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def reg_params
       params.require(:reg).permit(:alumnus_id, :event_id, :guests)
+    end
+
+    def alumnus_params
+      params.require(:alumnus).permit(:roll_no, :name, :grad_year, :personal_mail, :college_mail, :phone_no, :company_name, :designation, :location, :linkedIn, :facebook)
     end
 end

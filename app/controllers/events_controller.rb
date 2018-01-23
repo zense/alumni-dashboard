@@ -71,7 +71,7 @@ class EventsController < ApplicationController
 
     def ensure_admin
       unless current_alumnus.admin?
-        redirect_to(root_path, notice: 'Not authorized to edit/create evnets')
+        redirect_to(root_path, notice: 'Not authorized')
       end
     end
 

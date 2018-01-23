@@ -1,5 +1,6 @@
 class RegsController < ApplicationController
   before_action :authenticate_alumnus!
+  before_action :ensure_admin
   before_action :set_reg, only: [:show, :edit, :update, :destroy]
 
   # GET /regs
@@ -29,7 +30,7 @@ class RegsController < ApplicationController
 
     respond_to do |format|
       if @reg.save
-        format.html { redirect_to @reg, notice: 'Reg was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Successful.' }
         format.json { render :show, status: :created, location: @reg }
       else
         format.html { render :new }
@@ -66,6 +67,12 @@ class RegsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_reg
       @reg = Reg.find(params[:id])
+    end
+
+    def ensure_admin
+      unless current_alumnus.admin?
+        redirect_to(root_path, notice: 'Not authorized')
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

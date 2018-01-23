@@ -12,6 +12,17 @@ class EventsController < ApplicationController
   # GET /events/1
   # GET /events/1.json
   def show
+    @user=current_alumnus
+    @a=[]
+    @b=@user.id
+    i=0
+    Reg.where(:alumnus_id=>@user.id).each do |reg|
+      @a[i]=reg.event_id
+      print @a[i]
+      i+=1
+    end
+
+
   end
 
   # GET /events/new

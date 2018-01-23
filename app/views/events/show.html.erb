@@ -6,12 +6,25 @@
 </p>
 
 <%= link_to 'Back', events_path %>
-<form method="post" enctype="multipart/form-data" action="/regs">
-  <p>
-      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  </p>
-  <input hidden id="reg_event_id" name="reg[event_id]" value='<%= @event.id %>'>
-  <input hidden id="reg_alumnus_id" name="reg[alumnus_id]" value="<%= current_alumnus.id %>">
-  <input id="reg_guests" type="number" value="0" name="reg[guests]">
-  <input type="submit" value="RSVP for this event(RSVP)">
-</form>
+<% @is_true=0 %>
+  <% @a.each do |reg| %>
+    <% if reg==@event.id %>
+      <% @is_true=1 %>
+    <% end %>
+  <% end %>
+  <% if @is_true==1 %>
+  <p><h2> Already Registered</h2></p>
+
+<% else %>
+
+  <form method="post" enctype="multipart/form-data" action="/regs">
+    <p>
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    </p>
+    <input hidden id="reg_event_id" name="reg[event_id]" value='<%= @event.id %>'>
+    <input hidden id="reg_alumnus_id" name="reg[alumnus_id]" value="<%= current_alumnus.id %>">
+    <input id="reg_guests" type="number" value="0" name="reg[guests]">
+    <input type="submit" value="RSVP for this event(RSVP)">
+  </form>
+
+<% end %>

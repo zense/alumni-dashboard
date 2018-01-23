@@ -1,10 +1,16 @@
 <p id="notice"><%= notice %></p>
 
+<li>
+<%= link_to('Logout', destroy_alumnus_session_path, method: :delete) %>
+</li>
 
+<%= image_tag @event.Eventpic.thumb.url %>
 <p>
   <strong>Name:</strong>
   <%= @event.name %>
 </p>
+
+
 <% @is_true=0 %>
   <% @a.each do |reg| %>
     <% if reg==@event.id %>
@@ -20,6 +26,12 @@
 
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
+    <div class="form-group">
+      <label class="col-md-1 control-label" for="alumnus_guests">People coming with you</label>
+      <div class="col-md-9">
+        <input id="reg_guests" class="form-control" type="number" name="reg[guests]" />
+      </div>
+    </div>
   <div class="form-group">
     <label class="col-md-1 control-label" for="alumnus_roll_no">Roll no</label>
     <div class="col-md-9">
@@ -28,14 +40,9 @@
   </div>
 
 
-  <input hidden id="reg_event_id" name="reg[event_id]" value='1'>
-  <input hidden id="reg_alumnus_id" name="reg[alumnus_id]" value="1">
-    <div class="form-group">
-      <label class="col-md-1 control-label" for="alumnus_guests">Guests</label>
-      <div class="col-md-9">
-        <input id="reg_guests" class="form-control" type="number" name="alumnus[guests]" />
-      </div>
-    </div>
+  <input hidden id="reg_event_id" name="reg[event_id]" value="<%= @event.id %>">
+  <input hidden id="reg_alumnus_id" name="reg[alumnus_id]" value="<%= current_alumnus.id %>">
+
 
     <div class="form-group">
       <label class="col-md-1 control-label" for="alumnus_name">Name</label>
@@ -109,12 +116,13 @@
     </div>
 
   <div class="actions" style="text-align:center;">
-    <input type="submit"  value="Update Alumnus"  />
+    <input type="submit"  value="Update and RSVP for this "  />
   </div>
 </form>
 
 
 
 <% end %>
+
 
 <%= link_to 'Back', events_path %>

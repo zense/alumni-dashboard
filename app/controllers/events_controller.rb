@@ -1,4 +1,6 @@
 class EventsController < ApplicationController
+  before_action :authenticate_alumnus!
+  before_action :ensure_admin,  except: [:index, :show]
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   # GET /events
@@ -65,6 +67,12 @@ class EventsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_event
       @event = Event.find(params[:id])
+    end
+
+    def ensure_admin
+      unless current_alumnus.admin?
+        redirect_to(root_path, notice: 'Not authorized to edit/create evnets')
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

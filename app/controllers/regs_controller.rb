@@ -1,4 +1,5 @@
 class RegsController < ApplicationController
+  before_action :authenticate_alumnus!
   before_action :set_reg, only: [:show, :edit, :update, :destroy]
 
   # GET /regs

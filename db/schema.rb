@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180123080704) do
+ActiveRecord::Schema.define(version: 20180123084935) do
 
   create_table "alumni", force: :cascade do |t|
     t.integer "roll_no"
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 20180123080704) do
   create_table "regs", force: :cascade do |t|
     t.integer "alumnus_id"
     t.integer "event_id"
-    t.integer "guests", default: 0
+    t.integer "guests", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["alumnus_id"], name: "index_regs_on_alumnus_id"

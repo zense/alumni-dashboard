@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Regs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Alumnus</th>
+      <th>Event</th>
+      <th>Guests</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @regs.each do |reg| %>
+      <tr>
+        <td><%= reg.alumnus %></td>
+        <td><%= reg.event %></td>
+        <td><%= reg.guests %></td>
+        <td><%= link_to 'Show', reg %></td>
+        <td><%= link_to 'Edit', edit_reg_path(reg) %></td>
+        <td><%= link_to 'Destroy', reg, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reg', new_reg_path %>

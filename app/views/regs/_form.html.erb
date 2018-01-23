@@ -1,0 +1,32 @@
+<%= form_with(model: reg, local: true) do |form| %>
+  <% if reg.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(reg.errors.count, "error") %> prohibited this reg from being saved:</h2>
+
+      <ul>
+      <% reg.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :alumnus_id %>
+    <%= form.text_field :alumnus_id, id: :reg_alumnus_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :event_id %>
+    <%= form.text_field :event_id, id: :reg_event_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :guests %>
+    <%= form.number_field :guests, id: :reg_guests %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

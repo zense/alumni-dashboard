@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  alumnus: one
+  event: one
+  guests: 1
+
+two:
+  alumnus: two
+  event: two
+  guests: 1

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Alumnus:</strong>
+  <%= @reg.alumnus %>
+</p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @reg.event %>
+</p>
+
+<p>
+  <strong>Guests:</strong>
+  <%= @reg.guests %>
+</p>
+
+<%= link_to 'Edit', edit_reg_path(@reg) %> |
+<%= link_to 'Back', regs_path %>

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :regs
+  resources :events
   devise_for :alumni,:controllers => { :registrations=> "registrations" }
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :alumni

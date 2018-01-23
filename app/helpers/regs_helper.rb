@@ -1,0 +1,2 @@
+module RegsHelper
+end

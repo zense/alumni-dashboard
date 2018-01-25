@@ -15,6 +15,8 @@ To set up your Gmail account set ENV variables as mentioned below:
        ENV['GMAIL_USERNAME'] = 'YOUR GMAIL ID'
 
        ENV['GMAIL_PASSWORD'] = 'YOUR GMAIL PASSWORD'
+       
+- `bundle exec sidekiq -q default -q mailers` and `rails s` to get it up and running.
 
 To use custom parser:
 

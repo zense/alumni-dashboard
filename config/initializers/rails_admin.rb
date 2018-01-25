@@ -54,7 +54,7 @@ module RailsAdmin
                                 'linkedIn'=>object.linkedIn ,
                                 'facebook'=>object.facebook
                                 )
-                                AlumniMailer.test_mail(object,@subject,@body,@attachments).deliver
+                                AlumniMailer.test_mail(object,@subject,@body,@attachments).deliver_later
                             end
                             redirect_to back_or_index
                             flash[:success] = "#{@model_config.label} successfully mailed."

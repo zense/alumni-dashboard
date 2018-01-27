@@ -57,7 +57,8 @@ module RailsAdmin
                                 AlumniMailer.test_mail(object,@subject,@body,@attachments).deliver_later
                             end
                             redirect_to back_or_index
-                            flash[:waiting] = "Mailing process started, check Sidekiq dashboard to see unsent mails"
+                            flash[:waiting] = "Mailing process started, check Sidekiq dashboard to see unsent mails(All the unsent mails will be added to the 'dead' section after the process is finished)"
+
                         end
                     end
                 end

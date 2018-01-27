@@ -38,3 +38,5 @@ en:
         menu: 'Mail everyone listed in this page'
         breadcrumb: 'Bulk mail'
         bulk_link: 'Mail selected Alumni'
+    flash:
+      waiting: 'Mailing process started, check Sidekiq dashboard to see unsent mails'

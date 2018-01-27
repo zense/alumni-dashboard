@@ -57,7 +57,7 @@ module RailsAdmin
                                 AlumniMailer.test_mail(object,@subject,@body,@attachments).deliver_later
                             end
                             redirect_to back_or_index
-                            flash[:success] = "#{@model_config.label} successfully mailed."
+                            flash[:waiting] = "Mailing process started, check Sidekiq dashboard to see unsent mails"
                         end
                     end
                 end
@@ -72,6 +72,9 @@ RailsAdmin.config do |config|
 
   ## == Devise ==
   # config.total_columns_width = 1000
+  config.navigation_static_links = {
+  'Sidekiq Dashboard' => '/sidekiq/morgue' #or whatever you used to mount RailsAdmin in your routes file
+  }
   config.authenticate_with do
     warden.authenticate! scope: :alumnus
   end

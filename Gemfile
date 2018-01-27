@@ -11,8 +11,15 @@ gem 'rails', '~> 5.1.4'
 gem 'mini_magick'
 gem 'sidekiq'
 # gem 'sidekiq-failures'
-
-
+group :production do
+  gem 'pg', '~> 0.21.0'
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+end
+# gem 'pg', '~> 0.21.0'
+group :development, :test do
+  gem 'pg', '~> 0.21.0'
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+end
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'

@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20180123163851) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "alumni", force: :cascade do |t|
     t.integer "roll_no"
     t.string "name"
@@ -49,8 +52,8 @@ ActiveRecord::Schema.define(version: 20180123163851) do
   end
 
   create_table "regs", force: :cascade do |t|
-    t.integer "alumnus_id"
-    t.integer "event_id"
+    t.bigint "alumnus_id"
+    t.bigint "event_id"
     t.integer "guests", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -58,4 +61,6 @@ ActiveRecord::Schema.define(version: 20180123163851) do
     t.index ["event_id"], name: "index_regs_on_event_id"
   end
 
+  add_foreign_key "regs", "alumni"
+  add_foreign_key "regs", "events"
 end

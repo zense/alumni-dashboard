@@ -10,6 +10,7 @@ end
 gem 'rails', '~> 5.1.4'
 gem 'mini_magick'
 gem 'sidekiq'
+# gem 'sidekiq-failures'
 
 
 

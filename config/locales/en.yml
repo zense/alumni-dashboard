@@ -35,6 +35,6 @@ en:
     actions:
       bulk_mail:
         title: 'Compose Mail'
-        menu: 'Mail everyone'
+        menu: 'Mail everyone listed in this page'
         breadcrumb: 'Bulk mail'
         bulk_link: 'Mail selected Alumni'

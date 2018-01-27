@@ -8,7 +8,7 @@ class AlumniMailer < ApplicationMailer
           puts attachmentname
           attachments[attachmentname] = File.read('public/attachments/'+attachmentname)
         end
-        mail(to: @user.personal_mail, subject: @subject)
+        mail(to: @user.email, subject: @subject)
     end
 
     def send_welcome_message(user)

@@ -71,6 +71,7 @@ RailsAdmin.config do |config|
   ### Popular gems integration
 
   ## == Devise ==
+  # config.total_columns_width = 1000
   config.authenticate_with do
     warden.authenticate! scope: :alumnus
   end

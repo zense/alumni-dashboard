@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 n=100
 # user = Alumnus.new(
-#   email: 'visheshruparelia18@gmail.com',
+#   email: 'iiitb@xyz.com',
 #   password: '123123',
 #   password_confirmation: '123123',
-#   name: 'vishesh',
+#   name: 'bleh',
 #   admin: true
 # )
 #

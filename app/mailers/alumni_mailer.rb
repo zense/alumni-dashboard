@@ -1,6 +1,5 @@
 class AlumniMailer < ApplicationMailer
-      def test_mail(user,subject,body,attachmentnames)
-        @user=user
+      def test_mail(email,subject,body,attachmentnames)
         @subject=subject
         @body=body
         @attachments=attachmentnames
@@ -8,7 +7,7 @@ class AlumniMailer < ApplicationMailer
           puts attachmentname
           attachments[attachmentname] = File.read('public/attachments/'+attachmentname)
         end
-        mail(to: @user.email, subject: @subject)
+        mail(to: email, subject: @subject)
     end
 
     def send_welcome_message(user)

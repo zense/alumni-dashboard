@@ -11,7 +11,10 @@ module RailsAdmin
                 end
                 register_instance_option :controller do
                     proc do
-                        if (params[:subject].blank?)
+                        if request.get?
+                          @objects=Alumnus.all
+                          render @action.template_name
+                        elsif (params[:subject].blank?)
                             @objects=list_entries(@model_config, :post)
                             render @action.template_name
                         else
@@ -54,7 +57,7 @@ module RailsAdmin
                                 'linkedIn'=>object.linkedIn ,
                                 'facebook'=>object.facebook
                                 )
-                                AlumniMailer.test_mail(object,@subject,@body,@attachments).deliver_later
+                                AlumniMailer.test_mail(object.email,@subject,@body,@attachments).deliver_later
                             end
                             redirect_to back_or_index
                             flash[:waiting] = "Mailing process started, check Sidekiq dashboard to see unsent mails(All the unsent mails will be added to the 'dead' section after the process is finished)"

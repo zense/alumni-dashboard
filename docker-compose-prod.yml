@@ -1,0 +1,48 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    expose:
+      - "3000"
+    dns: "8.8.8.8"
+    volumes:
+      - ".:/app"
+    env_file: .env
+    links:
+      - redis:redis
+    external_links:
+      - postgres:db
+    command: bash -c "bundle exec rake assets:precompile & bundle exec rake db:seed && bundle exec rake db:migrate && rails s"
+    networks:
+      - production
+    restart: always
+  redis:
+    image: redis:latest
+    volumes:
+      - 'redis:/data'
+
+  worker:
+    build: .
+    env_file: .env
+    links:
+      - redis:redis
+    external_links:
+      - postgres:db
+    volumes:
+      - ".:/app"
+    command: bash -c "bundle exec sidekiq -q default -q mailers -d -L log/sidekiq.log -e production"
+    networks:
+      - production
+
+volumes:
+  redis:
+
+networks:
+  production:
+    external: true
+# Refer to: https://viky.co.in/2017/12/18/link-external-containers-using-docker-compose/
+# Useful commands:
+# docker network create production
+# docker network connect production postgres

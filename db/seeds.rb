@@ -5,26 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-n=100
-# user = Alumnus.new(
-#   email: 'iiitb@xyz.com',
-#   password: '123123',
-#   password_confirmation: '123123',
-#   name: 'bleh',
-#   admin: true
-# )
-#
-# user.save!
-i=0
-while i<n
-  p=i+11
-  user = Alumnus.new(
-    email: 'user@domain'+p.to_s+'.com',
-    password: '123123',
-    password_confirmation: '123123',
-    name: 'user@domain'+p.to_s+'.com'
-  )
-  puts 'user@domain'+p.to_s+'.com'
-  user.save!
-  i+=1
-end
+u = Alumnus.create(email:"admin@iitb.org", password:"thanks123")
+u.admin = true
+u.save!

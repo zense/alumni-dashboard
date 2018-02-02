@@ -25,9 +25,4 @@ RUN yarn install
 
 ADD . /app
 
-RUN rake db:create && rake db:migrate
-
-
-EXPOSE 3000
-
 CMD ["bundle", "exec", "rails", "s"]

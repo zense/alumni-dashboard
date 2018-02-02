@@ -2,7 +2,6 @@ version: '3'
 services:
   web:
     build: .
-
     ports:
       - "3000:3000"
     dns: "8.8.8.8"
@@ -11,10 +10,18 @@ services:
     env_file: .env
     links:
       - db:db
-      - solr:solr
+      - redis:redis
       # In production instead add external_links for db
-    command: bash -c "bin/rake assets:precompile && bin/rake db:create && bin/rake db:migrate && bin/rails s"
-
+    command: bash -c "bundle exec rake assets:precompile && bundle exec rake db:setup && bundle exec rake db:migrate && bundle exec rails s"
+  worker:
+    build: .
+    env_file: .env
+    links:
+      - db:db
+      - redis:redis
+    volumes:
+      - ".:/app"
+    command: bash -c "bundle exec sidekiq -q default -q mailers"
   # In production remove this and add an external link in web
   db:
     image: postgres:latest
@@ -22,17 +29,8 @@ services:
       - POSTGRES_PASSWORD=password
     volumes:
       - ./database:/var/lib/postgresql
-  solr:
-    image: solr:7.0.1
-    ports:
-      - "8983:8983"
-    volumes:
-      - data:/opt/solr/server/solr/mycores
-    entrypoint:
-      - docker-entrypoint.sh
-      - solr-precreate
-      - mycore
-    links:
-      - db:db
+
+  redis:
+    image: redis:latest
 volumes:
   data: {}

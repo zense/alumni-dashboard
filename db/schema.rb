@@ -10,16 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180123163851) do
+ActiveRecord::Schema.define(version: 20180203164437) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "alumni", force: :cascade do |t|
-    t.integer "roll_no"
     t.string "name"
     t.integer "grad_year"
-    t.string "personal_mail"
     t.string "college_mail"
     t.integer "phone_no"
     t.string "company_name"
@@ -40,6 +38,7 @@ ActiveRecord::Schema.define(version: 20180123163851) do
     t.datetime "last_sign_in_at"
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
+    t.string "roll_no"
     t.index ["email"], name: "index_alumni_on_email", unique: true
     t.index ["reset_password_token"], name: "index_alumni_on_reset_password_token", unique: true
   end

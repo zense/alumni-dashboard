@@ -15,6 +15,7 @@ default: &default
 
 development:
   <<: *default
+  adapter: sqlite3
   database: alumnidb_dev
 
 # Warning: The database defined as "test" will be erased and

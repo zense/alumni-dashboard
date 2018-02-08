@@ -1,97 +1,86 @@
-<%= form_with(model: alumnus, local: true,:html => {:class => "form-horizontal center"}) do |form| %>
-  <% if alumnus.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(alumnus.errors.count, "error") %> prohibited this alumnus from being saved:</h2>
+<%= form_for(@alumnus, html: { class: "form-horizontal", role: "form" }) do |f| %>
+  <% if @alumnus.errors.any? %>
+    <div class="alert alert-danger alert-dismissable" role="alert">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <h4><%= pluralize(@alumnus.errors.count, "error") %> prohibited this alumnus from being saved:</h4>
 
       <ul>
-      <% alumnus.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <% @alumnus.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
   <div class="form-group">
-    <%= form.label :roll_no, class: "col-md-1 control-label" %>
-    <div class="col-md-9">
-      <%= form.number_field :roll_no, id: :alumnus_roll_no, class: "form-control" %>
+    <%= f.label :roll_no, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :roll_no, class: "form-control" %>
     </div>
   </div>
-
-
-    <div class="form-group">
-      <%= form.label :name , class: "col-md-1 control-label" %>
-      <div class="col-md-9">
-        <%= form.text_field :name, id: :alumnus_name, class: "form-control" %>
-      </div>
+  <div class="form-group">
+    <%= f.label :name, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :name, class: "form-control" %>
     </div>
-
-    <div class="form-group">
-      <%= form.label :grad_year , class: "col-md-1 control-label" %>
-      <div class="col-md-9">
-        <%= form.text_field :grad_year, id: :alumnus_grad_year, class: "form-control" %>
-      </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :grad_year, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.number_field :grad_year, class: "form-control" %>
     </div>
-
-    <div class="form-group">
-      <%= form.label :personal_mail , class: "col-md-1 control-label" %>
-      <div class="col-md-9">
-        <%= form.text_field :personal_mail, id: :alumnus_personal_mail, class: "form-control" %>
-      </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :email, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :email, class: "form-control" %>
     </div>
-
-    <div class="form-group">
-      <%= form.label :college_mail , class: "col-md-1 control-label" %>
-      <div class="col-md-9">
-        <%= form.text_field :college_mail, id: :alumnus_college_mail, class: "form-control" %>
-      </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :college_mail, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :college_mail, class: "form-control" %>
     </div>
-
-    <div class="form-group">
-      <%= form.label :phone_no , class: "col-md-1 control-label" %>
-      <div class="col-md-9">
-        <%= form.text_field :phone_no, id: :alumnus_phone_no, class: "form-control" %>
-      </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :phone_no, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :phone_no, class: "form-control" %>
     </div>
-
-    <div class="form-group">
-      <%= form.label :company_name , class: "col-md-1 control-label" %>
-      <div class="col-md-9">
-        <%= form.text_field :company_name, id: :alumnus_company_name, class: "form-control" %>
-      </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :company_name, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :company_name, class: "form-control" %>
     </div>
-
-    <div class="form-group">
-      <%= form.label :designation , class: "col-md-1 control-label" %>
-      <div class="col-md-9">
-        <%= form.text_field :designation, id: :alumnus_designation, class: "form-control" %>
-      </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :designation, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :designation, class: "form-control" %>
     </div>
-
-
-    <div class="form-group">
-      <%= form.label :location , class: "col-md-1 control-label" %>
-      <div class="col-md-9">
-        <%= form.text_field :location, id: :alumnus_location, class: "form-control" %>
-      </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :location, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :location, class: "form-control" %>
     </div>
-
-    <div class="form-group">
-      <%= form.label :linkedIn , class: "col-md-1 control-label" %>
-      <div class="col-md-9">
-        <%= form.text_field :linkedIn, id: :alumnus_linkedIn, class: "form-control" %>
-      </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :linkedIn, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :linkedIn, class: "form-control" %>
     </div>
-
-    <div class="form-group">
-      <%= form.label :facebook , class: "col-md-1 control-label" %>
-      <div class="col-md-9">
-        <%= form.text_field :facebook, id: :alumnus_facebook, class: "form-control" %>
-      </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :facebook, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :facebook, class: "form-control" %>
     </div>
-
-
-  <div class="actions" style="text-align:center;">
-    <%= form.submit%>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit class: "btn btn-primary" %>
+    </div>
   </div>
 <% end %>

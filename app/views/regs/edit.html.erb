@@ -1,6 +1,13 @@
-<h1>Editing Reg</h1>
+<div class="page-header">
+  <%= link_to regs_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to @reg, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-info-sign"></span>
+    Show
+  <% end %>
+  <h1>Editing reg</h1>
+</div>
 
-<%= render 'form', reg: @reg %>
-
-<%= link_to 'Show', @reg %> |
-<%= link_to 'Back', regs_path %>
+<%= render 'form' %>

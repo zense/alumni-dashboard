@@ -17,7 +17,7 @@ class AlumniControllerTest < ActionDispatch::IntegrationTest
 
   test "should create alumnus" do
     assert_difference('Alumnus.count') do
-      post alumni_url, params: { alumnus: { college_mail: @alumnus.college_mail, company_name: @alumnus.company_name, designation: @alumnus.designation, facebook: @alumnus.facebook, grad_year: @alumnus.grad_year, linkedIn: @alumnus.linkedIn, location: @alumnus.location, name: @alumnus.name, personal_mail: @alumnus.personal_mail, phone_no: @alumnus.phone_no, roll_no: @alumnus.roll_no } }
+      post alumni_url, params: { alumnus: { college_mail: @alumnus.college_mail, company_name: @alumnus.company_name, designation: @alumnus.designation, facebook: @alumnus.facebook, grad_year: @alumnus.grad_year, linkedIn: @alumnus.linkedIn, location: @alumnus.location, name: @alumnus.name, email: @alumnus.email, phone_no: @alumnus.phone_no, roll_no: @alumnus.roll_no } }
     end
 
     assert_redirected_to alumnus_url(Alumnus.last)
@@ -34,7 +34,7 @@ class AlumniControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update alumnus" do
-    patch alumnus_url(@alumnus), params: { alumnus: { college_mail: @alumnus.college_mail, company_name: @alumnus.company_name, designation: @alumnus.designation, facebook: @alumnus.facebook, grad_year: @alumnus.grad_year, linkedIn: @alumnus.linkedIn, location: @alumnus.location, name: @alumnus.name, personal_mail: @alumnus.personal_mail, phone_no: @alumnus.phone_no, roll_no: @alumnus.roll_no } }
+    patch alumnus_url(@alumnus), params: { alumnus: { college_mail: @alumnus.college_mail, company_name: @alumnus.company_name, designation: @alumnus.designation, facebook: @alumnus.facebook, grad_year: @alumnus.grad_year, linkedIn: @alumnus.linkedIn, location: @alumnus.location, name: @alumnus.name, email: @alumnus.email, phone_no: @alumnus.phone_no, roll_no: @alumnus.roll_no } }
     assert_redirected_to alumnus_url(@alumnus)
   end
 

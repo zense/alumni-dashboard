@@ -11,15 +11,7 @@ gem 'rails', '~> 5.1.4'
 gem 'mini_magick'
 gem 'sidekiq'
 # gem 'sidekiq-failures'
-group :production do
-  gem 'pg', '~> 0.21.0'
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-end
-# gem 'pg', '~> 0.21.0'
-group :development, :test do
-  gem 'pg', '~> 0.21.0'
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-end
+gem 'pg', '~> 0.21.0'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
@@ -38,7 +30,8 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 gem 'devise-bootstrap-views'
-
+gem 'bootstrap-generators', '~> 3.3.4'
+gem 'record_tag_helper', '~> 1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -62,6 +55,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'sqlite3'
 end
 
 group :development do

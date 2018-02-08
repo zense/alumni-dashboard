@@ -1,6 +1,13 @@
-<h1>Editing Alumnus</h1>
+<div class="page-header">
+  <%= link_to alumni_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to @alumnus, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-info-sign"></span>
+    Show
+  <% end %>
+  <h1>Editing alumnus</h1>
+</div>
 
-<%= render 'form', alumnus: @alumnus %>
-
-<%= link_to 'Show', @alumnus %> |
-<%= link_to 'Back', alumni_path %>
+<%= render 'form' %>

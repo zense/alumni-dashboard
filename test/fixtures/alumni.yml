@@ -4,7 +4,7 @@ one:
   roll_no: 1
   name: MyString
   grad_year: 1
-  personal_mail: MyString
+  email: MyString
   college_mail: MyString
   phone_no: 1
   company_name: MyString
@@ -17,7 +17,7 @@ two:
   roll_no: 1
   name: MyString
   grad_year: 1
-  personal_mail: MyString
+  email: MyString
   college_mail: MyString
   phone_no: 1
   company_name: MyString

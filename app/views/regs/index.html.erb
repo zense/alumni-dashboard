@@ -1,31 +1,31 @@
-<p id="notice"><%= notice %></p>
+<div class="page-header">
+  <%= link_to new_reg_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Reg
+  <% end %>
+  <h1>Listing Event Registrations</h1>
+</div>
 
-<h1>Regs</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Alumnus</th>
-      <th>Event</th>
-      <th>Guests</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @regs.each do |reg| %>
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
       <tr>
-        <td><%= reg.alumnus %></td>
-        <td><%= reg.event %></td>
-        <td><%= reg.guests %></td>
-        <td><%= link_to 'Show', reg %></td>
-        <td><%= link_to 'Edit', edit_reg_path(reg) %></td>
-        <td><%= link_to 'Destroy', reg, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <th>Alumnus</th>
+            <th>Event</th>
+            <th>Guests</th>
+        <th></th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
-
-<%= link_to 'New Reg', new_reg_path %>
+    <tbody>
+      <%= content_tag_for(:tr, @regs) do |reg| %>
+            <td><%= link_to reg.alumnus.name, reg.alumnus %></td>
+            <td><%= link_to reg.event.name, reg.event %></td>
+            <td><%= reg.guests %></td>
+        <td><%= link_to 'Edit', edit_reg_path(reg) %></td>
+        <td><%= link_to 'Deregister', reg, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

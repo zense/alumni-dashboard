@@ -7,13 +7,12 @@ class AlumniController < ApplicationController
   # GET /alumni.json
   # @alumnus=current_alumnus
   def index
-    @alumnus = current_alumnus
+    @alumni = [current_alumnus]
   end
 
   # GET /alumni/1
   # GET /alumni/1.json
   def show
-    @alumnus = Alumnus.find params[:id]
     unless current_alumnus == @alumnus
       flash[:notice] = "You don't have access!"
       redirect_to root_path
@@ -28,7 +27,6 @@ class AlumniController < ApplicationController
 
   # GET /alumni/1/edit
   def edit
-    @alumnus = Alumnus.find params[:id]
     unless current_alumnus == @alumnus
       flash[:notice] = "You don't have access!"
       redirect_to root_path
@@ -84,7 +82,7 @@ class AlumniController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def alumnus_params
-      params.require(:alumnus).permit(:roll_no, :name, :grad_year, :personal_mail, :college_mail, :phone_no, :company_name, :designation, :location, :linkedIn, :facebook)
+      params.require(:alumnus).permit(:roll_no, :name, :grad_year, :email, :college_mail, :phone_no, :company_name, :designation, :location, :linkedIn, :facebook)
     end
 
 end

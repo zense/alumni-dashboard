@@ -1,22 +1,21 @@
 class RegsController < ApplicationController
-  before_action :authenticate_alumnus!
-  before_action :ensure_admin
-  before_action :set_reg, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_alumnus!, except: :new
+  before_action :ensure_admin, except: :new
+  before_action :set_reg, only: [:edit, :update, :destroy]
 
   # GET /regs
   # GET /regs.json
   def index
-    @regs = Reg.all
-  end
-
-  # GET /regs/1
-  # GET /regs/1.json
-  def show
+    @regs = Reg.where(alumnus: current_alumnus)
   end
 
   # GET /regs/new
   def new
+    sign_in(:alumnus, Alumnus.find(params[:alumnus_id]))
+    puts current_alumnus
     @reg = Reg.new
+    @reg.alumnus = current_alumnus
+    @reg.event = Event.find(params[:event_id])
   end
 
   # GET /regs/1/edit
@@ -26,10 +25,13 @@ class RegsController < ApplicationController
   # POST /regs
   # POST /regs.json
   def create
+    if Reg.where(reg_params.except("guests")).nil? == false
+      flash[:notice] = "You are already registered for this event!"
+      redirect_to root_path and return
+    end
+
     current_alumnus.update(alumnus_params)
     @reg = Reg.new(reg_params)
-
-
     respond_to do |format|
       if @reg.save
         format.html { redirect_to root_path, notice: 'Successful.' }
@@ -84,6 +86,6 @@ class RegsController < ApplicationController
     end
 
     def alumnus_params
-      params.require(:alumnus).permit(:roll_no, :name, :grad_year, :personal_mail, :college_mail, :phone_no, :company_name, :designation, :location, :linkedIn, :facebook)
+      params.require(:reg).require(:alumnus).permit(:roll_no, :name, :grad_year, :email, :college_mail, :phone_no, :company_name, :designation, :location, :linkedIn, :facebook)
     end
 end

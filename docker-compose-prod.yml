@@ -21,7 +21,7 @@ services:
 
   redis:
     image: redis:latest
-   restart: always
+    restart: always
     volumes:
       - 'redis:/data'
     networks:
@@ -31,7 +31,7 @@ services:
   worker:
     build: .
     env_file: .env
-   restart: always
+    restart: always
     links:
       - redis:redis
     external_links:

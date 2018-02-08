@@ -18,14 +18,20 @@ services:
     networks:
       - production
     restart: always
+
   redis:
     image: redis:latest
+   restart: always
     volumes:
       - 'redis:/data'
+    networks:
+      - production
+
 
   worker:
     build: .
     env_file: .env
+   restart: always
     links:
       - redis:redis
     external_links:

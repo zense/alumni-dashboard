@@ -14,7 +14,7 @@ services:
       - redis:redis
     external_links:
       - postgres:db
-    command: bash -c "bundle exec rake assets:precompile & bundle exec rake db:create && bundle exec rake db:migrate && rails s"
+    command: bash -c "bundle exec rake assets:precompile && bundle exec rake db:create && bundle exec rake db:migrate && bundle exec rails s"
     networks:
       - production
     restart: always

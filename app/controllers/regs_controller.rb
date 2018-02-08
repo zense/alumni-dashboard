@@ -11,7 +11,7 @@ class RegsController < ApplicationController
 
   # GET /regs/new
   def new
-    sign_in(:alumnus, Alumnus.find(params[:alumnus_id]))
+    sign_in(:alumnus, Alumnus.find(params[:alumnus_id])) if current_alumnus.nil?
     puts current_alumnus
     @reg = Reg.new
     @reg.alumnus = current_alumnus
@@ -25,7 +25,7 @@ class RegsController < ApplicationController
   # POST /regs
   # POST /regs.json
   def create
-    if Reg.where(reg_params.except("guests")).nil? == false
+    if Reg.where(reg_params.except("guests")).first.nil? == false
       flash[:notice] = "You are already registered for this event!"
       redirect_to root_path and return
     end

@@ -105,6 +105,7 @@ RailsAdmin.config do |config|
     dashboard                     # mandatory
     index                         # mandatory
     new
+    import
     export
     bulk_delete
     show
@@ -115,5 +116,10 @@ RailsAdmin.config do |config|
     ## With an audit adapter, you can add:
     # history_index
     # history_show
+  end
+
+  config.configure_with(:import) do |config|
+    config.logging = true
+    config.line_item_limit = 3000
   end
 end

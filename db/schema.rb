@@ -14,9 +14,9 @@ ActiveRecord::Schema.define(version: 20180203164437) do
 
   create_table "alumni", force: :cascade do |t|
     t.string "name"
-    t.integer "grad_year"
+    t.string "grad_year"
     t.string "college_mail"
-    t.integer "phone_no"
+    t.string "phone_no"
     t.string "company_name"
     t.string "designation"
     t.string "location"

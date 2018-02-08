@@ -76,7 +76,7 @@ RailsAdmin.config do |config|
 
   ## == Devise ==
   # config.total_columns_width = 1000
-  config.default_items_per_page = 1000
+  config.default_items_per_page = 100
   config.navigation_static_links = {
   'Sidekiq Dashboard' => '/sidekiq/morgue' #or whatever you used to mount RailsAdmin in your routes file
   }

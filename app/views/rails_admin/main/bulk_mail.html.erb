@@ -1,11 +1,6 @@
 <!-- Include external CSS. -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.css">
-
-    <!-- Include Editor style. -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.1/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.1/css/froala_style.min.css" rel="stylesheet" type="text/css" />
-
+		<script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
 <form method="post" enctype="multipart/form-data" action="">
     <p>
         <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
@@ -20,7 +15,12 @@
     </p>
     <p>
         <label for="body">Body:</label>
-        <textarea name="body"></textarea>
+        <textarea id="email_body" name="body"></textarea>
+        <script>
+          // Replace the <textarea id="editor1"> with a CKEditor
+          // instance, using default configuration.
+          CKEDITOR.replace( 'email_body' );
+      </script>
     </p>
     <p>
         <input type="submit" value="Send message">
@@ -51,16 +51,3 @@
         </ul>
     </p>
 </div>
-
-    <!-- Include Editor JS files. -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.1/js/froala_editor.pkgd.min.js"></script>
-
-    <!-- Initialize the editor. -->
-    <script>
-    $.getScript("https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.1/js/froala_editor.pkgd.min.js", function () {
-         $('textarea').froalaEditor({
-             height:300
-         })
-     });
-
-    </script>

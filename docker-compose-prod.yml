@@ -38,7 +38,7 @@ services:
       - postgres:db
     volumes:
       - ".:/app"
-    command: bash -c "bundle exec sidekiq -q default -q mailers -d -L log/sidekiq.log -e production"
+    command: bash -c "bundle exec sidekiq -q mailers -L log/sidekiq.log -e production"
     networks:
       - production
 

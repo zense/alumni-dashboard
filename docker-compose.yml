@@ -12,7 +12,7 @@ services:
       - db:db
       - redis:redis
       # In production instead add external_links for db
-    command: bash -c "bundle exec rake assets:precompile && bundle exec rake db:setup && bundle exec rake db:migrate && bundle exec rails s"
+    command: bash -c "bundle exec rake assets:precompile && bundle exec rake db:create && bundle exec rake db:migrate && bundle exec rails s"
   worker:
     build: .
     env_file: .env

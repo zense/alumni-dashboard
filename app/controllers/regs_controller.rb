@@ -1,6 +1,6 @@
 class RegsController < ApplicationController
   before_action :authenticate_alumnus!, except: :new
-  before_action :ensure_admin, except: :new
+#   before_action :ensure_admin, except: :new
   before_action :set_reg, only: [:edit, :update, :destroy]
 
   # GET /regs

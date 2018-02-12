@@ -34,6 +34,7 @@ module RailsAdmin
                                 @body=@body_temp.render(
                                 'roll_no'=>object.roll_no ,
                                 'name'=>object.name ,
+                                'id'=>object.id,
                                 'grad_year'=>object.grad_year ,
                                 'email'=>object.email ,
                                 'college_mail'=>object.college_mail ,
@@ -47,6 +48,7 @@ module RailsAdmin
                                 @subject=@subject_temp.render(
                                 'roll_no'=>object.roll_no ,
                                 'name'=>object.name ,
+                                'id'=>object.id,
                                 'grad_year'=>object.grad_year ,
                                 'email'=>object.email ,
                                 'college_mail'=>object.college_mail ,
